@@ -1,5 +1,5 @@
 {
-  "name": "mern-server",
+  "name": "backend",
   "version": "1.0.0",
   "description": "Book Inventory Management System",
   "main": "index.js",
