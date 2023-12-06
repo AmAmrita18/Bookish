@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
 
         {/*NavItems for sm devices */}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-peach ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
+        <div className={`space-y-4 px-4 mt-16 py-7 bg-peach-light ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
           {navItems.map(({ link, path }) => (
             <Link
               key={path}
