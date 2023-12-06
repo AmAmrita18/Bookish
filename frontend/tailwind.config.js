@@ -8,6 +8,8 @@ export default {
     colors: {
       'slate': '#475569',
       'slate-dark': '#1e293b',
+      'peach': '#FCD1D1',
+      'teal': '#AEE1E1',
       
     },
     fontFamily: {
