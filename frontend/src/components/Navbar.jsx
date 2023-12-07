@@ -43,7 +43,7 @@ const Navbar = () => {
           {/*logo*/}
           <Link
             to="/"
-            className="text-[28px] font-bold text-slate flex items-center gap-2  hover:text-slate-dark"
+            className="text-[28px] font-bold text-blue flex items-center gap-2  hover:text-blue-extra-dark"
           >
             <img src="/book.png" className="h-8 w-8 inline-block" />
             Bookish
@@ -55,7 +55,7 @@ const Navbar = () => {
               <Link
                 key={path}
                 to={path}
-                className="block font-bold text-slate text-base cursor-pointer uppercase hover:text-slate-dark"
+                className="block font-bold text-blue text-base cursor-pointer uppercase hover:text-blue-extra-dark"
               >
                 {link}
               </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
           {/* btn for lg devices*/}
           <div className="space-x-12 hidden lg:flex items-center">
             <button>
-              <FaBars className="w-5 text-slate hover:text-slate-dark" />
+              <FaBars className="w-5 text-blue hover:text-blue-extra-dark" />
             </button>
           </div>
 
@@ -76,21 +76,21 @@ const Navbar = () => {
               className="text-slate focus:outline-none"
             >
               {isMenuOpen ? (
-                <RxCross2 className="h-5 w-5 text-slate hover:text-slate-dark" />
+                <RxCross2 className="h-5 w-5 text-blue hover:text-blue-extra-dark" />
               ) : (
-                <FaBars className="w-5 text-slate hover:text-slate-dark" />
+                <FaBars className="w-5 text-blue hover:text-blue-extra-dark" />
               )}
             </button>
           </div>
         </div>
 
         {/*NavItems for sm devices */}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-peach ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
+        <div className={`space-y-4 px-4 mt-16 py-7 bg-yellow-light ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
           {navItems.map(({ link, path }) => (
             <Link
               key={path}
               to={path}
-              className="block font-bold text-slate text-base cursor-pointer uppercase hover:text-slate-dark"
+              className="block font-bold text-blue text-base cursor-pointer uppercase hover:text-blue-extra-dark"
             >
               {link}
             </Link>

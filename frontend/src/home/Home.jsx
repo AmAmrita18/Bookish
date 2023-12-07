@@ -4,7 +4,7 @@ import FavouriteBooks from "./FavouriteBooks"
 
 const Home = () => {
   return (
-    <div className="lg:px-40 bg-peach-light">
+    <div className="lg:px-40 bg-yellow">
       <Banner/>
       <FavouriteBooks/>
     </div>
