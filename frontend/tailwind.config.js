@@ -6,10 +6,11 @@ export default {
   ],
   theme: {
     colors: {
-      'slate': '#475569',
-      'slate-dark': '#1e293b',
-      'peach': '#FCD1D1',
-      'peach-light': '#ECE2E1',
+      'slate': '#003566',
+      'slate-dark': '#000814',
+      'white': '#fff',
+      'peach': '#F1B4BB',
+      'peach-light': '#ffc300',
       'teal': '#AEE1E1',
       
     },

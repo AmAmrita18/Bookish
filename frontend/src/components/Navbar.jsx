@@ -37,15 +37,15 @@ const Navbar = () => {
   ];
 
   return (
-    <header className='w-full bg-transparent fixed top-0 right-0 transition-all ease-in duration-300'>
+    <header className='w-full lg:px-[85px] bg-transparent fixed top-0 right-0 transition-all ease-in duration-300'>
       <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0 right-0" : ""}`}>
         <div className="flex justify-between items-center text-base gap-8">
           {/*logo*/}
           <Link
             to="/"
-            className="text-2xl font-bold text-slate flex items-center gap-2  hover:text-slate-dark"
+            className="text-[28px] font-bold text-slate flex items-center gap-2  hover:text-slate-dark"
           >
-            <img src="/book.png" className="h-10 w-10 inline-block" />
+            <img src="/book.png" className="h-8 w-8 inline-block" />
             Bookish
           </Link>
 
@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
 
         {/*NavItems for sm devices */}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-peach-light ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
+        <div className={`space-y-4 px-4 mt-16 py-7 bg-peach ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
           {navItems.map(({ link, path }) => (
             <Link
               key={path}
