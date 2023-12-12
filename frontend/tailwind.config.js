@@ -12,8 +12,8 @@ export default {
       'white': '#fff',
       'yellow-light': '#ffd60a',
       'yellow': '#ffc300',
-      'pink': '#be185d',
-      'gray-light': '#e5e5e5',
+      'purple':'#cdb4db',
+      
       
     },
     fontFamily: {

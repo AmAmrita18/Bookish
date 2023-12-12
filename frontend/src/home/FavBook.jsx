@@ -1,5 +1,6 @@
 import React from "react";
-import favBookImg from "../assets/fav-books/FavBook4.jpg";
+import { Link } from "react-router-dom";
+import favBookImg from "../assets/FavBookImage.png";
 const FavBook = () => {
   return (
     <div className="px-4 my-20 flex flex-col md:flex-row justify-between items-center gap-12">
@@ -16,6 +17,7 @@ const FavBook = () => {
           consequatur. Dolor veniam ullam sit saepe alias illum repellat quam
           quo.
         </p>
+        {/*Stats*/}
         <div className="flex flex-col sm:flex-row justify-between gap-6 md:w-3/4 my-14">
           <div>
             <h3 className="text-3xl font-bold">800+</h3>
@@ -30,6 +32,8 @@ const FavBook = () => {
             <p className="text-base">PDF Downloads</p>
           </div>
         </div>
+
+        <Link to="/shop" className="mt-12 block"><button className="bg-blue text-white font-semibold rounded hover:bg-blue-extra-dark px-5 py-2 transition-all duration-300 ">Explore More</button></Link>
       </div>
     </div>
   );
