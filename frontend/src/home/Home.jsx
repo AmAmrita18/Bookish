@@ -1,14 +1,16 @@
 import Banner from "../components/Banner"
 import BestSellerBooks from "./BestSellerBooks"
 import FavBook from "./FavBook"
+import PromoBanner from "./PromoBanner"
 
 
 const Home = () => {
   return (
-    <div className="lg:px-40 bg-yellow">
+    <div className=" bg-yellow">
       <Banner/>
       <BestSellerBooks/>
       <FavBook/>
+      <PromoBanner/> 
     </div>
   )
 }
