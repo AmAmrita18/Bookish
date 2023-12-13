@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import bookPic from "../assets/book-award.png"
 const PromoBanner = () => {
@@ -10,7 +9,7 @@ const PromoBanner = () => {
           <Link to="/shop" className="mt-12 block"><button className="bg-blue text-white font-semibold rounded hover:bg-blue-extra-dark px-5 py-2 transition-all duration-300 ">Get Promo Code</button></Link>
         </div>
         <div>
-            <img src={bookPic}/>
+            <img src={bookPic} className="h-72 w-72 mx-8"/>
         </div>
       </div>
     </div>
