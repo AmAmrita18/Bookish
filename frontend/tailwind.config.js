@@ -9,9 +9,10 @@ export default {
       'blue': '#003566',
       'blue-dark': '001d3d',
       'blue-extra-dark': '#000814',
-      'white': '#fff',
+      'white': '#ffffff',
+      'off-white': '#e5e5e5',
       'yellow-light': '#ffd60a',
-      'yellow': '#ffc300',
+      'yellow': '#fca311',
       'purple':'#cdb4db',
       
       

@@ -37,7 +37,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className='w-full  bg-yellow bg-opacity-75 fixed top-0 right-0 transition-all ease-in duration-300'>
+    <header className='w-full  bg-off-white bg-opacity-75 shadow-inner fixed top-0 right-0 transition-all ease-in duration-300'>
       <nav className={`py-4 lg:px-32 px-4 ${isSticky ? "sticky top-0 right-0" : ""}`}>
         <div className="flex justify-between items-center text-base gap-8">
           {/*logo*/}
