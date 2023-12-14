@@ -21,6 +21,8 @@ export default {
     },
     fontFamily: {
       sans: ['Playpen Sans', 'cursive'],
+      // sans: ['Lato', 'sans-serif'],
+      
     },
     extend: {},
   },

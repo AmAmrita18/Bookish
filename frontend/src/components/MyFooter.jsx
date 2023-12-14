@@ -3,19 +3,19 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 const MyFooter = () => {
   return (
     <Footer className='bg-blue-extra-dark'>
-      <div className="w-full">
+      <div className="w-full lg:px-32">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
           <div>
-            <Footer.Title title="Company" className='text-off-white ' />
+            <Footer.Title title="Company" className='text-yellow ' />
             <Footer.LinkGroup col>
-              <Footer.Link href="#" className='text-off-white '>About</Footer.Link>
-              <Footer.Link href="#" className='text-off-white '>Careers</Footer.Link>
-              <Footer.Link href="#" className='text-off-white '>Brand Center</Footer.Link>
-              <Footer.Link href="#" className='text-off-white '>Blog</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>About</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Careers</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Brand Center</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Blog</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
-            <Footer.Title title="help center" className='text-off-white hover:text-yellow' />
+            <Footer.Title title="help center" className='text-yellow' />
             <Footer.LinkGroup col>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>Discord Server</Footer.Link>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>Twitter</Footer.Link>
@@ -24,7 +24,7 @@ const MyFooter = () => {
             </Footer.LinkGroup>
           </div>
           <div>
-            <Footer.Title title="legal" className='text-off-white hover:text-yellow' />
+            <Footer.Title title="legal" className='text-yellow' />
             <Footer.LinkGroup col>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>Privacy Policy</Footer.Link>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>Licensing</Footer.Link>
@@ -32,7 +32,7 @@ const MyFooter = () => {
             </Footer.LinkGroup>
           </div>
           <div>
-            <Footer.Title title="download" className='text-off-white hover:text-yellow' />
+            <Footer.Title title="download" className='text-yellow' />
             <Footer.LinkGroup col>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>iOS</Footer.Link>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>Android</Footer.Link>
