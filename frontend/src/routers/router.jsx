@@ -7,6 +7,7 @@ import Blog from "../components/Blog";
 import SingleBook from "../shop/SingleBook";
 import DashboardLayout from "../dashboard/DashboardLayout";
 import Dashboard from "../dashboard/dashboard";
+import UploadBook from "../dashboard/UploadBook";
 
 const router = createBrowserRouter([
   {
@@ -44,8 +45,12 @@ const router = createBrowserRouter([
       {
         path: "/admin/dashboard",
         element: <Dashboard/>
+      },
+      {
+        path: "/admin/dashboard/upload",
+        element: <UploadBook/>
       }
-    ]
+    ] 
   }
 ]);
 
