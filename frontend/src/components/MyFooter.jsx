@@ -41,14 +41,14 @@ const MyFooter = () => {
             </Footer.LinkGroup>
           </div>
         </div>
-        <div className="w-full bg-off-white px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Bookish™" year={2023} className='text-blue-extra-dark hover:text-blue'/>
+        <div className="w-full border-t-2 border-t-off-white px-4 py-6 sm:flex sm:items-center sm:justify-between">
+          <Footer.Copyright href="#" by="Bookish™" year={2023} className='text-yellow'/>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" className='text-blue-extra-dark hover:text-blue' icon={BsFacebook} />
-            <Footer.Icon href="#" className='text-blue-extra-dark hover:text-blue' icon={BsInstagram} />
-            <Footer.Icon href="#" className='text-blue-extra-dark hover:text-blue' icon={BsTwitter} />
-            <Footer.Icon href="#" className='text-blue-extra-dark hover:text-blue' icon={BsGithub} />
-            <Footer.Icon href="#" className='text-blue-extra-dark hover:text-blue' icon={BsDribbble} />
+            <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsFacebook} />
+            <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsInstagram} />
+            <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsTwitter} />
+            <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsGithub} />
+            <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsDribbble} />
           </div>
         </div>
       </div>
