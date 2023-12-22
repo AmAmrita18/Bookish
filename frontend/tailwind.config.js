@@ -9,15 +9,12 @@ export default {
   theme: {
     colors: {
       'blue': '#003566',
-      'blue-dark': '001d3d',
+      'blue-dark': '#001d3d',
       'blue-extra-dark': '#000814',
       'white': '#ffffff',
       'off-white': '#e5e5e5',
       'yellow-light': '#ffd60a',
       'yellow': '#fca311',
-      'purple':'#cdb4db',
-      
-      
     },
     fontFamily: {
       sans: ['Playpen Sans', 'cursive'],
