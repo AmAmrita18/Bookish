@@ -4,7 +4,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.(js,jsx,ts,tsx)',
+    'node_modules/flowbite-react/lib/esm/**/*.js',
+
   ],
   theme: {
     colors: {
@@ -23,5 +24,5 @@ export default {
     },
     extend: {},
   },
-  plugins:[import('flowbite/plugin')],
+  plugins:[require('flowbite/plugin')],
 }
