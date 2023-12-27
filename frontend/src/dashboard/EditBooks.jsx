@@ -1,9 +1,9 @@
-import { useLoaderData} from "react-router-dom";
+import { useLoaderData, useParams} from "react-router-dom";
 import { Label, Button, Textarea, Select, TextInput } from "flowbite-react";
 import { useState } from "react";
 
 const EditBooks = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
   const { title, author, imageURL, description, readBookURL } = useLoaderData();
 
   const bookCategories = [
@@ -47,7 +47,7 @@ const EditBooks = () => {
     const description = form.description.value;
     const readBookURL = form.readBookURL.value;
 
-    const bookObj = {
+    const updateBookObj = {
       title,
       author,
       imageURL,
@@ -58,7 +58,15 @@ const EditBooks = () => {
     // console.log(bookObj);
 
     //update book data
-    fetch()
+    fetch(`http://localhost:8000/book/${id}`, {
+      method:"PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updateBookObj)
+    }).then(res => res.json()).then(data => {
+      alert("Book Uploaded Successfully!")
+    })
   };
 
   return (
