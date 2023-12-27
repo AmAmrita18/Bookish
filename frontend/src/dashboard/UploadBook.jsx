@@ -5,7 +5,7 @@ const UploadBook = () => {
   const bookCategories = [
     "Fiction",
     "Non-Fiction",
-    "Mistery",
+    "Mystery",
     "Programming",
     "Science Fiction",
     "Fantasy",
@@ -60,9 +60,6 @@ const UploadBook = () => {
     alert("Book uploaded successfully!!!")
   })
   }
-
- 
-
 
   return (
     <div className="px-4 my-12">
