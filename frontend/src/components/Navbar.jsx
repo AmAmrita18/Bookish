@@ -11,6 +11,7 @@ const Navbar = () => {
 
   const {user} = useContext(AuthContext);
   console.log(user);
+  
   //toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -75,6 +76,7 @@ const Navbar = () => {
             <button>
               <FaBars className="w-5 text-off-white hover:text-yellow" />
             </button>
+           
           </div>
 
           {/*menu btn for mobile devices*/}
