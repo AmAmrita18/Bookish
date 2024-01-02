@@ -12,12 +12,23 @@ import {
 } from "react-icons/hi";
 
 import userImg from "../assets/people/people2.png"
+import { useContext } from "react";
+import { AuthContext } from "../contects/AuthProvider";
 const SideBar = () => {
+  const {user} = useContext(AuthContext);
+  console.log(user);
   return (
     <Sidebar aria-label="Sidebar with content separator example" >
       <Sidebar.Items>
-      <Sidebar.Logo href="#" img={userImg} imgAlt=" logo" >
-        BOOKISH
+      <Sidebar.Logo href="/">
+        <div className="flex gap-3 absolute left-5 ">
+          <img src={user?.photoURL} className="rounded-full w-[24px] h-[24px]" alt=" " />
+          <p className="text-blue-extra-dark">
+            {
+              user?.displayName || <p className="text-blue-extra-dark">User</p>
+            }
+          </p>
+        </div>
       </Sidebar.Logo>
         <Sidebar.ItemGroup>
           <Sidebar.Item href="/admin/dashboard" icon={HiChartPie} >

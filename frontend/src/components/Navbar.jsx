@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { AuthContext } from "../contects/AuthProvider";
@@ -61,13 +61,13 @@ const Navbar = () => {
           {/*nav items for large device*/}
           <ul className="md:flex space-x-12 hidden">
             {navItems.map(({ link, path }) => (
-              <Link
+              <NavLink
                 key={path}
                 to={path}
-                className="block font-bold text-off-white text-base cursor-pointer uppercase hover:text-yellow"
+                className={({isActive}) => `block font-bold text-base cursor-pointer uppercase ${isActive ? 'text-yellow' : 'text-off-white'} hover:text-yellow`}
               >
                 {link}
-              </Link>
+              </NavLink>
             ))}
           </ul>
 

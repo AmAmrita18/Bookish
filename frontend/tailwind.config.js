@@ -16,6 +16,7 @@ export default {
       'off-white': '#e5e5e5',
       'yellow-light': '#ffd60a',
       'yellow': '#fca311',
+      'red': '#dc2626'
     },
     fontFamily: {
       sans: ['Playpen Sans', 'cursive'],
