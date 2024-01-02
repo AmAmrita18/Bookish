@@ -1,8 +1,6 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../contects/AuthProvider";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 const SignUp = () => {
@@ -53,7 +51,7 @@ const SignUp = () => {
         <div className="relative px-4 py-10 bg-off-white shadow-lg sm:rounded-3xl sm:p-20">
           <div className="max-w-md mx-auto">
             <div>
-              <h1 className="text-2xl font-bold text-center">Join Us, Bibliophile!</h1>
+              <h1 className="text-2xl font-bold text-center">Join Us Today!</h1>
             </div>
             <div className="divide-y divide-yellow">
               <form
@@ -89,7 +87,7 @@ const SignUp = () => {
                   here!{" "}
                 </p>
                 <div className="relative">
-                  <button className="bg-blue hover:bg-blue-extra-dark text-off-white h-10 text-base rounded-md px-4 py-1">
+                  <button onClick={() => handleSignUp} className="bg-blue hover:bg-blue-extra-dark text-off-white h-10 text-base rounded-md px-4 py-1">
                     Sign up
                   </button>
                 </div>
@@ -98,7 +96,7 @@ const SignUp = () => {
 
             <hr className="text-blue-extra-dark"/>
             <div className=" flex w-full items-center flex-col mt-5 ">
-                <button onClick={handleRegister} className="flex gap-2 text-base text-blue "><FcGoogle className="w-6 h-6"/> Login with Google</button>
+                <button onClick={() => handleRegister} className="flex gap-2 text-base text-blue "><FcGoogle className="w-6 h-6"/> Login with Google</button>
             </div>
           </div>
         </div>

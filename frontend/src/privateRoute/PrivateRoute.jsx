@@ -1,21 +1,21 @@
-import { useContext, useLocation } from "react"
-import { AuthContext } from "../contects/AuthProvider"
-import { Spinner } from 'flowbite-react';
+import { useContext } from "react";
+import { useLocation } from "react-router-dom";
+import { AuthContext } from "../contects/AuthProvider";
+import { Spinner } from "flowbite-react";
+import { Navigate } from "react-router-dom";
 
+const PrivateRoute = ({ children }) => {
+  const { user, loading } = useContext(AuthContext);
+  const location = useLocation();
 
-const PrivateRoute = ({children}) => {
-  const {user, loading} = useContext(AuthContext);
-const location = useLocation();
+  if (loading) {
+    return (
+      <div className="text-center">
+        <Spinner aria-label="Center-aligned spinner example" />
+      </div>
+    );
+  }
+  return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
+};
 
-if(loading){
-  return  <div className="text-center">
-  <Spinner aria-label="Center-aligned spinner example" />
-</div>
-
-}
-  return (
-    <div>Private Route</div>
-  )
-}
-
-export default PrivateRoute
+export default PrivateRoute;
