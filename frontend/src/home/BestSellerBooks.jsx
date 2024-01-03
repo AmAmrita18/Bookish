@@ -9,7 +9,7 @@ const BestSellerBooks = () => {
     }, [])
   return (
     
-    <div>
+    <div className=''>
         <BookCards books={books} headline="Best Seller Books"/>
     </div>
   )

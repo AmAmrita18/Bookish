@@ -11,7 +11,7 @@ const About = () => {
           <div className="flex items-center gap-10">
             <div className="w-[70%] ">
               <h2 className="text-4xl text-blue font-bold mb-4">Our Mission</h2>
-              <p className="text-gray-700">
+              <p className="text-blue-extra-dark">
                 At Bookish, our mission is to foster a community of book lovers
                 by providing a platform that seamlessly connects readers,
                 buyers, and sellers. We aim to celebrate the joy of reading and
@@ -31,7 +31,7 @@ const About = () => {
               <img
                 src="src/assets/about-img/book (8).png"
                 alt=""
-                className="w-[250px] h-[250px]"
+                className="w-[300px] h-[300px]"
               />
             </div>
           </div>
@@ -44,14 +44,14 @@ const About = () => {
               <img
                 src="src/assets/about-img/book (4).png"
                 alt=""
-                className="w-[250px] h-[250px]"
+                className="w-[300px] h-[300px]"
               />
             </div>
             <div className="w-[70%]">
               <h2 className="text-4xl text-blue font-bold mb-4">
                 What Sets Us Apart
               </h2>
-              <p className="text-gray-700">
+              <p className="text-blue-extra-dark">
                 At Bookish, our commitment to excellence goes beyond the
                 ordinary. What sets us apart is the dedication to providing a
                 personalized and inclusive experience for our users. We
@@ -96,7 +96,7 @@ const About = () => {
               <h2 className="text-4xl text-blue font-bold mb-4">
                 Why Bookish?
               </h2>
-              <p className="text-gray-700">
+              <p className="text-blue-extra-dark">
               Dive into a world of diverse stories and genres. Bookish offers an extensive range of books, ensuring that every reader discovers something new and exciting.
               
                 Choose Bookish because we are more than just a marketplace — we
@@ -112,7 +112,7 @@ const About = () => {
               <img
                 src="src/assets/about-img/book (6).png"
                 alt=""
-                className="w-[250px] h-[250px]"
+                className="w-[300px] h-[300px]"
               />
             </div>
           </div>

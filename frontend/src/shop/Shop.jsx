@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [books, setBooks] = useState([]);
@@ -15,18 +16,32 @@ const Shop = () => {
       <div className="grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
         {books.map((book, index) => (
           <Card key={index}>
-            <img src={book.imageURL} alt="" className="h-96"/>
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {book.title}
-            </h5>
-            <p className="font-normal text-blue-extra-dark dark:text-blue">
-              <p>
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-              </p>
-            </p>
+            <img src={book.imageURL} alt="" className="h-96" />
 
-            <button className="bg-blue hover:bg-blue-extra-dark font-semibold text-white py-2 my-2 rounded">Buy Now</button>
+            <div className="flex flex-col gap-1 px-1">
+              <h3 className="font-bold text-ellipsis truncate text-blue-extra-dark text-xl">
+                {book.title}
+              </h3>
+              <p className="text-sm font-semibold text-blue-extra-dark">{book.author}</p>
+              <p className="font-normal text-blue-extra-dark dark:text-blue">
+                <p className="text-blue line-clamp-4 text-xs">
+                  {book.description}
+                </p>
+              </p>
+
+              <div className="flex justify-between w-full items-center">
+                <p className="text-sm font-bold text-blue-extra-dark">
+                  {book.category}
+                </p>
+                <div className="text-sm font-bold text-blue">$10.00</div>
+              </div>
+            </div>
+
+            <Link to={`${book.readBookURL}`} className="bg-blue hover:bg-blue-extra-dark font-semibold text-center text-white py-2  rounded-md">
+              <button >
+                Buy Now
+              </button>
+            </Link>
           </Card>
         ))}
       </div>
