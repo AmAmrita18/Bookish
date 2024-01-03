@@ -27,11 +27,10 @@ const UploadBook = () => {
     bookCategories[0]
   );
   const handleChangeSelectedValue = (event) => {
-    // console.log(event.target.value);
     setSelectedBookCategory(event.target.value);
   };
 
-  //handle book submission
+  // handle book submission
   const handleBookSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -44,33 +43,46 @@ const UploadBook = () => {
     const readBookURL = form.readBookURL.value;
 
     const bookObj = {
-      title, author, imageURL, category, description, readBookURL
-    }
-    console.log(bookObj)
+      title,
+      author,
+      imageURL,
+      category,
+      description,
+      readBookURL,
+    };
+    console.log(bookObj);
 
-     //send data to DB
-  fetch("http://localhost:8000/upload-book", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(bookObj)
-  }).then(res => res.json()).then(data => {
-    //console.log(data)
-    alert("Book uploaded successfully!!!")
-  })
-  }
+    // send data to DB
+    fetch("http://localhost:8000/upload-book", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(bookObj),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert("Book uploaded successfully!!!");
+      });
+  };
 
   return (
-    <div className="px-4 my-12">
-      <h2 className="mb-8 text-3xl font-bold">Upload a Book</h2>
-      <form onSubmit={handleBookSubmit} className="flex flex-col flex-wrap gap-4 lg:w-[1180px]">
-        {/*first row*/}
-        <div className="flex gap-8">
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="title" value="Book Title" name="title" />
-            </div>
+    <div className="px-8 md:px-8 lg:px-16 py-8 bg-yellow w-full ">
+      <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+        Upload a Book
+      </h2>
+      <form
+        onSubmit={handleBookSubmit}
+        className="flex flex-col gap-4 max-w-4xl mx-auto"
+      >
+        <div className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
+          <div className="mb-4 md:w-[45%]">
+            <Label
+              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              htmlFor="title"
+              value="Book Title"
+              name="title"
+            />
             <TextInput
               id="title"
               name="title"
@@ -79,10 +91,14 @@ const UploadBook = () => {
               required
             />
           </div>
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="author" value="Author Name" name="author" />
-            </div>
+
+          <div className="mb-4 md:w-[45%]">
+            <Label
+              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              htmlFor="author"
+              value="Author Name"
+              name="author"
+            />
             <TextInput
               id="author"
               name="author"
@@ -93,16 +109,14 @@ const UploadBook = () => {
           </div>
         </div>
 
-        {/*second row*/}
-        <div className="flex gap-8">
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label
-                htmlFor="imageURL"
-                value="Book image URL"
-                name="imageURL"
-              />
-            </div>
+        <div className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
+          <div className="mb-4 md:w-[45%]">
+            <Label
+              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              htmlFor="imageURL"
+              value="Book image URL"
+              name="imageURL"
+            />
             <TextInput
               id="imageURL"
               name="imageURL"
@@ -112,15 +126,16 @@ const UploadBook = () => {
             />
           </div>
 
-          {/*category*/}
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="inputState" value="Book Category" />
-            </div>
+          <div className="mb-4 md:w-[45%]">
+            <Label
+              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              htmlFor="inputState"
+              value="Book Category"
+            />
             <Select
               id="inputState"
               name="category"
-              className="w-full rounded "
+              className="rounded"
               value={selectedBookCategory}
               onChange={handleChangeSelectedValue}
             >
@@ -133,39 +148,45 @@ const UploadBook = () => {
           </div>
         </div>
 
-        {/*book description*/}
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="description" value="Book Description" />
-          </div>
+        <div className="mb-4">
+          <Label
+            className="text-lg md:text-xl font-bold text-blue-extra-dark"
+            htmlFor="description"
+            value="Book Description"
+          />
           <Textarea
             id="description"
             name="description"
             placeholder="Write your book description here..."
             required
-            className="w-full"
+            className="p-2"
             rows={6}
           />
-
-          {/*pdf link*/}
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
-            </div>
-            <TextInput
-              id="readBookURL"
-              name="readBookURL"
-              type="text"
-              placeholder="Book pdf URL"
-              required
-            />
-          </div>
         </div>
-        <Button type="submit" className="mt-5 border text-off-white bg-blue">Upload Book</Button>
+
+        <div className="mb-4">
+          <Label
+            className="text-lg md:text-xl font-bold text-blue-extra-dark"
+            htmlFor="readBookURL"
+            value="Book PDF URL"
+          />
+          <TextInput
+            id="readBookURL"
+            name="readBookURL"
+            type="text"
+            placeholder="Book pdf URL"
+            required
+          />
+        </div>
+
+        <Button
+          type="submit"
+          className="mt-5 border-none text-off-white bg-blue hover:bg-blue-extra-dark"
+        >
+          Upload Book
+        </Button>
       </form>
     </div>
-
-
   );
 };
 

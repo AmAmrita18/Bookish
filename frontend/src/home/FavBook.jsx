@@ -4,7 +4,7 @@ const FavBook = () => {
   return (
     <div className="my-20 px-4 lg:px-32 flex flex-col md:flex-row justify-between items-center gap-12">
       <div className="w-1/2 md:w-1/2">
-        <img src={favBookImg} alt="" className="rounded md:w-10/12" />
+        <img src={favBookImg} alt="" className="rounded md:w-10/12 brightness-90" />
       </div>
       <div className="w-1/2 space-y-6">
         <h2 className="text-5xl font-bold my-5 pr-2  leading-snug">

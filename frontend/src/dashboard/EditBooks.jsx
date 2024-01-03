@@ -1,4 +1,4 @@
-import { useLoaderData, useParams} from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { Label, Button, Textarea, Select, TextInput } from "flowbite-react";
 import { useState } from "react";
 
@@ -59,7 +59,7 @@ const EditBooks = () => {
 
     //update book data
     fetch(`http://localhost:8000/book/${id}`, {
-      method:"PATCH",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
@@ -70,18 +70,17 @@ const EditBooks = () => {
   };
 
   return (
-    <div className="px-4 my-12">
-      <h2 className="mb-8 text-3xl font-bold">Update the book data</h2>
+    <div className="px-8 md:px-8 lg:px-16 py-8 bg-yellow w-full ">
+      <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center">Update the book data</h2>
       <form
         onSubmit={handleUpdate}
-        className="flex flex-col flex-wrap gap-4 lg:w-[1180px]"
+        className="flex flex-col gap-4 max-w-4xl mx-auto"
       >
         {/*first row*/}
-        <div className="flex gap-8">
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="title" value="Book Title" name="title" />
-            </div>
+        <div  className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
+          <div className="mb-4 md:w-[45%]">
+            <Label htmlFor="title"
+            className="text-lg md:text-xl font-bold text-blue-extra-dark" value="Book Title" name="title" />
             <TextInput
               id="title"
               name="title"
@@ -91,10 +90,9 @@ const EditBooks = () => {
               defaultValue={title}
             />
           </div>
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="author" value="Author Name" name="author" />
-            </div>
+          <div className="mb-4 md:w-[45%]">
+          <Label htmlFor="author" 
+          className="text-lg md:text-xl font-bold text-blue-extra-dark" value="Author Name" name="author" />
             <TextInput
               id="author"
               name="author"
@@ -107,16 +105,15 @@ const EditBooks = () => {
         </div>
 
         {/*second row*/}
-        <div className="flex gap-8">
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label
+        <div className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
+          <div className="mb-4 md:w-[45%]">
+          <Label
+          className="text-lg md:text-xl font-bold text-blue-extra-dark"
                 htmlFor="imageURL"
                 value="Book image URL"
                 name="imageURL"
-                
+
               />
-            </div>
             <TextInput
               id="imageURL"
               name="imageURL"
@@ -128,14 +125,13 @@ const EditBooks = () => {
           </div>
 
           {/*category*/}
-          <div className="lg:w-1/2">
-            <div className="mb-2 block">
-              <Label htmlFor="inputState" value="Book Category" />
-            </div>
+          <div className="mb-4 md:w-[45%]">
+          <Label htmlFor="inputState" 
+          className="text-lg md:text-xl font-bold text-blue-extra-dark" value="Book Category" />
             <Select
               id="inputState"
               name="category"
-              className="w-full rounded "
+              className="rounded "
               value={selectedBookCategory}
               onChange={handleChangeSelectedValue}
             >
@@ -150,24 +146,21 @@ const EditBooks = () => {
 
         {/*book description*/}
         <div>
-          <div className="mb-2 block">
-            <Label htmlFor="description" value="Book Description" />
-          </div>
+        <Label htmlFor="description" className="text-lg md:text-xl font-bold text-blue-extra-dark" value="Book Description" />
           <Textarea
             id="description"
             name="description"
             placeholder="Write your book description here..."
             required
-            className="w-full"
+            className="p-2"
             rows={6}
             defaultValue={description}
           />
 
           {/*pdf link*/}
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="email1" value="Your email" />
-            </div>
+          <div className="mb-4">
+          <Label htmlFor="email1" 
+          className="text-lg md:text-xl font-bold text-blue-extra-dark" value="Your email" />
             <TextInput
               id="readBookURL"
               name="readBookURL"
@@ -178,7 +171,7 @@ const EditBooks = () => {
             />
           </div>
         </div>
-        <Button type="submit" className="mt-5 border text-off-white bg-blue">
+        <Button type="submit" className="mt-5 border-none text-off-white bg-blue hover:bg-blue-extra-dark">
           Update Book
         </Button>
       </form>

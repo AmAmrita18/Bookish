@@ -4,7 +4,7 @@ import { sliders } from '../utils/sliders';
 const CarouselCard = () => {
   const image1 = 'src/assets/carousel-card/carousel-7.jpg'
   return (
-    <div className='w-[100%]  rounded-none py-10 px-4 lg:px-32 bg-cover' style={{ backgroundImage: `url('${image1}')`}}>
+    <div className='w-[100%] brightness-90 rounded-none py-10 px-4 lg:px-32 bg-cover' style={{ backgroundImage: `url('${image1}')`}}>
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
             <Carousel slideInterval={3000}>
                 {
