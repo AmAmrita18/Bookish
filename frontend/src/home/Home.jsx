@@ -9,7 +9,7 @@ import Review from "./Review"
 
 const Home = () => {
   return (
-    <div className=" bg-yellow">
+    <div className="w-full bg-yellow">
       
       <Banner/>
       <CarouselCard/>
