@@ -8,10 +8,10 @@ const MyFooter = () => {
           <div>
             <Footer.Title title="Company" className='text-yellow ' />
             <Footer.LinkGroup col>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Home</Footer.Link>
               <Footer.Link href="#" className='text-off-white hover:text-yellow'>About</Footer.Link>
-              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Careers</Footer.Link>
-              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Brand Center</Footer.Link>
-              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Blog</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Browse</Footer.Link>
+              <Footer.Link href="#" className='text-off-white hover:text-yellow'>Sell Your Book</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>

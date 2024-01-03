@@ -11,8 +11,34 @@ const Shop = () => {
       .then((data) => setBooks(data));
   }, []);
   return (
-    <div className="px-4 py-28 lg:px-32 bg-yellow">
-      <h2 className="text-5xl font-bold text-center">All Books are here</h2>
+    <div className="px-4 pt-28 pb-[1rem] lg:px-32 bg-yellow">
+      <div className="flex w-full flex-col md:flex-row justify-between items-center py-4 ">
+        <div className="md:w-1/2 space-y-10">
+          <h2 className=" text-5xl text-blue-extra-dark font-bold leading-snug ">
+            Explore Our <span className="text-blue">Book</span> Collections
+          </h2>
+          <h4 className="text-2xl font-bold font-sans text-blue-extra-dark italic">
+            &#10077; Your Next Chapter Begins Here! &#10078;
+          </h4>
+          <p className="text-base text-blue-extra-dark mb-8">
+            Embark on a literary
+            journey through our diverse book collection, where every page holds
+            a new adventure waiting to unfold. Whether you&apos;re drawn to the
+            enchanting realms of fiction, the gripping mysteries that keep you
+            on the edge of your seat, the timeless tales of love and romance, or
+            the mind-bending narratives of science fiction, our curated
+            selection caters to every reader&apos;s taste. Let the
+            magic of words transport you to worlds beyond your imagination.
+          </p>
+        </div>
+        <div>
+          <img
+            src="src/assets/browseCollectionImg.png"
+            className="h-[380px] w-[380px] mx-8"
+          />
+        </div>
+      </div>
+
       <div className="grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
         {books.map((book, index) => (
           <Card key={index}>
@@ -22,7 +48,9 @@ const Shop = () => {
               <h3 className="font-bold text-ellipsis truncate text-blue-extra-dark text-xl">
                 {book.title}
               </h3>
-              <p className="text-sm font-semibold text-blue-extra-dark">{book.author}</p>
+              <p className="text-sm font-semibold text-blue-extra-dark">
+                {book.author}
+              </p>
               <p className="font-normal text-blue-extra-dark dark:text-blue">
                 <p className="text-blue line-clamp-4 text-xs">
                   {book.description}
@@ -37,10 +65,11 @@ const Shop = () => {
               </div>
             </div>
 
-            <Link to={`${book.readBookURL}`} className="bg-blue hover:bg-blue-extra-dark font-semibold text-center text-white py-2  rounded-md">
-              <button >
-                Buy Now
-              </button>
+            <Link
+              to={`${book.readBookURL}`}
+              className="bg-blue hover:bg-blue-extra-dark font-semibold text-center text-white py-2  rounded-md"
+            >
+              <button>Buy Now</button>
             </Link>
           </Card>
         ))}

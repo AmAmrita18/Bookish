@@ -11,7 +11,6 @@ import {
   HiViewBoards,
 } from "react-icons/hi";
 
-import userImg from "../assets/people/people2.png"
 import { useContext } from "react";
 import { AuthContext } from "../contects/AuthProvider";
 const SideBar = () => {
