@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book (8).png"
+                src="src/assets/about-img/book (6).png"
                 alt=""
                 className="w-[300px] h-[300px]"
               />
@@ -111,7 +111,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book (6).png"
+                src="src/assets/login.png"
                 alt=""
                 className="w-[300px] h-[300px]"
               />

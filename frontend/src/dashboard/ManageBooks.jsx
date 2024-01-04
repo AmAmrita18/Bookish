@@ -25,52 +25,52 @@ const ManageBooks = () => {
   };
 
   return (
-    <div className="p-4 md:p-8 lg:p-16 bg-yellow w-full">
-      <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    <div className="px-1 lg:pt-0 pb-8  md:pt-0 pt-10 lg:px-16 bg-yellow w-full">
+      <h2 className="my-4 text-3xl md:text-4xl lg:text-5xl font-bold text-center">
         Manage Your Books
       </h2>
-      <div className="max-w-screen-xl mx-auto">
-        <Table hoverable className="w-full">
-          <Table.Head className="bg-blue-extra-dark text-yellow text-base font-semibold">
-            <Table.HeadCell>ID</Table.HeadCell>
-            <Table.HeadCell>Book Name</Table.HeadCell>
-            <Table.HeadCell>Author</Table.HeadCell>
-            <Table.HeadCell>Category</Table.HeadCell>
-            <Table.HeadCell>Price</Table.HeadCell>
-            <Table.HeadCell>Modify</Table.HeadCell>
+      <div className="max-w-screen-xl overflow-y-auto h-[84vh] relative mx-auto rounded-md ">
+        <Table hoverable className="w-full ">
+          <Table.Head className="bg-blue-extra-dark sticky top-0 text-yellow text-base font-semibold rounded-t-md">
+            <Table.HeadCell className="md:px-[1rem] lg:px[1.5rem]">ID</Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Book Name</Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Author</Table.HeadCell>
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">Category</Table.HeadCell>
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">Price</Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Modify</Table.HeadCell>
           </Table.Head>
 
-          <Table.Body>
+          <Table.Body className="rounded-md">
             {allBooks.map((book, index) => (
               <Table.Row
                 key={book._id}
-                className="bg-white dark:border-blue dark:bg-blue-extra-dark"
+                className="bg-white  dark:border-blue dark:bg-blue-extra-dark"
               >
-                <Table.Cell className="font-medium text-blue-extra-dark text-base">
+                <Table.Cell className=" md:px-[1rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {index + 1}
                 </Table.Cell>
-                <Table.Cell className="font-medium text-blue-extra-dark text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.title}
                 </Table.Cell>
-                <Table.Cell className="font-medium text-blue-extra-dark text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.author}
                 </Table.Cell>
-                <Table.Cell className="font-medium text-blue-extra-dark text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] hidden md:table-cell font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.category}
                 </Table.Cell>
-                <Table.Cell className="font-medium text-blue-extra-dark text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] hidden md:table-cell font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   $10.00
                 </Table.Cell>
-                <Table.Cell className="flex gap-2">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] flex gap-2">
                   <Link
                     to={`/admin/dashboard/edit-books/${book._id}`}
-                    className="font-bold text-white hover:bg-blue-extra-dark bg-blue rounded-full px-2 py-1 text-sm"
+                    className="font-bold text-white hover:bg-blue-extra-dark bg-blue rounded-full px-2 py-1 md:text-sm text-xs"
                   >
                     Edit
                   </Link>
                   <button
                     onClick={() => handleDelete(book._id)}
-                    className="bg-blue px-3 py-1 font-semibold text-off-white rounded-md hover:bg-red text-sm"
+                    className="bg-blue px-3 py-1 font-semibold text-off-white rounded-md hover:bg-red md:text-sm text-xs"
                   >
                     Delete
                   </button>

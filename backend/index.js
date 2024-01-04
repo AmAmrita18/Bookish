@@ -84,12 +84,27 @@ async function run() {
 
     //find by category
     app.get("/all-books", async(req, res) => {
-      let query = {};
-      if(req.query?.category){
-        query = {category: req.query.category}
+      try {
+        let query = {};
+        
+        // Check if there is a search query
+        if (req.query.search) {
+          const searchRegex = new RegExp(req.query.search, 'i');
+          query = {
+            $or: [
+              { title: { $regex: searchRegex } },
+              { author: { $regex: searchRegex } },
+              { category: { $regex: searchRegex } }
+            ]
+          };
+        }
+    
+        const result = await bookCollections.find(query).toArray();
+        res.send(result);
+      } catch (error) {
+        console.log(error);
+        res.status(500).send({ error: "Internal Server Error" });
       }
-      const result = await bookCollections.find(query).toArray();
-      res.send(result);
     })
 
     //to get single book data
@@ -114,3 +129,9 @@ run().catch(console.dir);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+
+
+// Search for books based on title or author
+
+

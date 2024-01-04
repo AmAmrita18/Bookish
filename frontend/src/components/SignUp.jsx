@@ -33,7 +33,8 @@ const SignUp = () => {
 
   //signup using google account
   const handleRegister = () => {
-    loginwithGoogle().then((result) => {
+    loginwithGoogle()
+    .then((result) => {
         const user = result.user;
         alert("Sign up successfully!");
         navigate(from, { replace: true });
@@ -87,7 +88,7 @@ const SignUp = () => {
                   here!{" "}
                 </p>
                 <div className="relative">
-                  <button onClick={() => handleSignUp} className="bg-blue hover:bg-blue-extra-dark text-off-white h-10 text-base rounded-md px-4 py-1">
+                  <button onClick={() => handleSignUp()} className="bg-blue hover:bg-blue-extra-dark text-off-white h-10 text-base rounded-md px-4 py-1">
                     Sign up
                   </button>
                 </div>
@@ -96,7 +97,7 @@ const SignUp = () => {
 
             <hr className="text-blue-extra-dark"/>
             <div className=" flex w-full items-center flex-col mt-5 ">
-                <button onClick={() => handleRegister} className="flex gap-2 text-base text-blue "><FcGoogle className="w-6 h-6"/> Login with Google</button>
+                <button onClick={() => handleRegister()} className="flex gap-2 text-base text-blue "><FcGoogle className="w-6 h-6"/> Sign up with Google</button>
             </div>
           </div>
         </div>

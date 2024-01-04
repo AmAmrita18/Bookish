@@ -4,7 +4,7 @@ import { AuthContext } from "../contects/AuthProvider";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const { login, loginwithGoogle } = useContext(AuthContext);
+  const {login, loginwithGoogle } = useContext(AuthContext);
   const [error, setError] = useState(false);
 
   const location = useLocation();
@@ -13,6 +13,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   const handleLogIn = (event) => {
+    setError("");
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
@@ -29,7 +30,7 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        setError(error.message)
+        setError(error.message);
       });
   };
 
@@ -38,7 +39,7 @@ const Login = () => {
     loginwithGoogle()
       .then((result) => {
         const user = result.user;
-        alert("Sign up successfully!");
+        alert("Login successfully!");
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -49,6 +50,7 @@ const Login = () => {
   };
   return (
     <div className="min-h-screen bg-yellow py-6 flex flex-col justify-center sm:py-12">
+      
       <div className="relative py-3 sm:mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-blue to-blue-extra-dark shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
         <div className="relative px-4 py-10 bg-off-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -80,7 +82,7 @@ const Login = () => {
                   />
                 </div>
                 <p className="text-red text-xs">
-                    {error ? "Invalid Email or Password" : ""}
+                  {error ? "Invalid Email or Password" : ""}
                 </p>
                 <p className="text-blue text-xs text-center">
                   Don&apos;t have an account? Please{" "}
@@ -94,7 +96,7 @@ const Login = () => {
                 </p>
                 <div className="relative">
                   <button
-                    onClick={() => handleLogIn}
+                    onClick={() => handleLogIn()}
                     className="bg-blue hover:bg-blue-extra-dark text-off-white h-10 text-base rounded-md px-4 py-1"
                   >
                     Login
@@ -106,7 +108,7 @@ const Login = () => {
             <hr className="text-blue-extra-dark" />
             <div className=" flex w-full items-center flex-col mt-5 ">
               <button
-                onClick={handleRegister}
+                onClick={handleRegister()}
                 className="flex gap-2 text-base text-blue "
               >
                 <FcGoogle className="w-6 h-6" /> Login with Google

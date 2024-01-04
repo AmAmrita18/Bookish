@@ -4,7 +4,7 @@ import SideBar from "./SideBar"
 
 const DashboardLayout = () => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row bg-yellow">
       
       <SideBar/>
       <Outlet/>

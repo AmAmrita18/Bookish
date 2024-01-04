@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
 import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
-
+import { IoSearch } from "react-icons/io5";
 const Shop = () => {
   const [books, setBooks] = useState([]);
-
+  const [search, setSearch] = useState();
+  
+  const handleSearch = () => {
+    fetch(`http://localhost:8000/all-books?search=${search}`)
+      .then((res) => res.json())
+      .then((data) =>{
+        setBooks(data)
+        console.log(data)
+      } );
+      
+  }
   useEffect(() => {
     fetch("http://localhost:8000/all-books")
       .then((res) => res.json())
@@ -30,6 +40,13 @@ const Shop = () => {
             selection caters to every reader&apos;s taste. Let the
             magic of words transport you to worlds beyond your imagination.
           </p>
+          <div className="flex flex-row items-center">
+            <input type="text" name="search" id="search" placeholder="search a book by title/author/category" value={search} onChange={(e) => {
+              setSearch(e.target.value)
+              handleSearch()
+            }} className="px-2 h-[40px] w-[270px] rounded-l-lg text-sm font-extralight outline-none" />
+            <button className="bg-blue h-[40px]  px-2 text-center hover:bg-blue-extra-dark rounded-r-lg transition-all ease-in duration-200 text-white" onClick={() => handleSearch()}><IoSearch /></button>
+          </div>
         </div>
         <div>
           <img

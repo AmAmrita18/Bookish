@@ -4,7 +4,7 @@ import React from 'react';
 
 const Dashboard = () => {
   return (
-    <div className=" pt-28 w-full pb-[1rem] lg:px-32 bg-yellow">
+    <div className=" pt-28 w-full min-h-screen pb-[1rem] lg:px-32 bg-yellow">
       <div className="container  mx-auto mt-8">
         <h1 className="text-3xl font-semibold mb-4">Book Inventory Dashboard</h1>
 
