@@ -4,10 +4,11 @@ import { FaBars, FaHome } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { BiBuoy } from "react-icons/bi";
 import { useLocation, useNavigate } from "react-router-dom";
+import { IoCloudUpload } from "react-icons/io5";
+
 import {
   HiChartPie,
   HiInbox,
-  HiOutlineCloudUpload,
   HiTable,
   HiUser,
   HiViewBoards,
@@ -63,12 +64,12 @@ const SideBar = () => {
           <Sidebar.Logo href="/">
             <div className="flex items-center ">
               <img
-                src={user?.photoURL}
+                src={user?.photoURL || "/book.png"}
                 className="rounded-full absolute left-5 w-[24px] h-[24px]"
                 alt=" "
               />
               <p className="text-yellow pl-5 text-semibold">
-                {user?.displayName || "User"}
+                {user?.displayName || "Bookish"}
               </p>
             </div>
           </Sidebar.Logo>
@@ -79,7 +80,7 @@ const SideBar = () => {
             <Sidebar.Item
               className="hover:text-yellow"
               href="/admin/dashboard/upload"
-              icon={HiOutlineCloudUpload}
+              icon={IoCloudUpload}
             >
               Upload Books
             </Sidebar.Item>

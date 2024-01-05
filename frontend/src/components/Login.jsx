@@ -108,7 +108,7 @@ const Login = () => {
             <hr className="text-blue-extra-dark" />
             <div className=" flex w-full items-center flex-col mt-5 ">
               <button
-                onClick={handleRegister()}
+                onClick={() => handleRegister()}
                 className="flex gap-2 text-base text-blue "
               >
                 <FcGoogle className="w-6 h-6" /> Login with Google

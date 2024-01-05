@@ -1,6 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { Label, Button, Textarea, Select, TextInput } from "flowbite-react";
 import { useState } from "react";
+import { MdBrowserUpdated } from "react-icons/md";
+
 
 const EditBooks = () => {
   const { id } = useParams();
@@ -71,7 +73,8 @@ const EditBooks = () => {
 
   return (
     <div className="px-8 md:px-8 lg:px-16 py-8 bg-yellow w-full ">
-      <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center">Update the book data</h2>
+      <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center flex gap-1 items-center justify-center"><MdBrowserUpdated />
+Update the book data</h2>
       <form
         onSubmit={handleUpdate}
         className="flex flex-col gap-4 max-w-4xl mx-auto"

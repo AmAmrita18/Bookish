@@ -63,7 +63,7 @@ const Shop = () => {
            <Link to={`/book/${book._id}`}>
            <img src={book.imageURL} alt="" className="h-96" />
            <div className="flex flex-col gap-1 px-1">
-              <h3 className="font-bold text-ellipsis truncate text-blue-extra-dark text-xl">
+              <h3 className="font-bold text-ellipsis truncate pt-2 text-blue-extra-dark text-xl">
                 {book.title}
               </h3>
               <p className="text-sm font-semibold text-blue-extra-dark">

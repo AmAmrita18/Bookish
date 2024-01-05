@@ -69,7 +69,7 @@ const Navbar = () => {
           {/*logo*/}
           <Link
             to="/"
-            className="text-[28px] font-semibold text-off-white flex items-center gap-2 "
+            className="text-[28px] font-semibold text-yellow flex items-center gap-2 "
           >
             <img src="/book.png" className="h-8 w-8 inline-block" />
             Bookish

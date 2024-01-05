@@ -42,7 +42,7 @@ const MyFooter = () => {
           </div>
         </div>
         <div className="w-full border-t-2 border-t-off-white px-4 py-6 sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Bookish™" year={2023} className='text-yellow'/>
+          <Footer.Copyright href="#" by="Bookish™" year={2024} className='text-yellow'/>
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
             <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsFacebook} />
             <Footer.Icon href="#" className='text-off-white hover:text-yellow' icon={BsInstagram} />

@@ -1,6 +1,7 @@
 import { Table } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { HiInbox } from "react-icons/hi";
 
 const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
@@ -25,26 +26,39 @@ const ManageBooks = () => {
   };
 
   return (
-    <div className="px-1 lg:pt-0 pb-8  md:pt-0 pt-10 lg:px-16 bg-yellow w-full">
-      <h2 className="my-4 text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    <div className="px-1 lg:pt-0 pb-8  md:pt-0   pt-8 mt-3 lg:px-16 bg-yellow w-full">
+      <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center flex gap-1 items-center justify-center">
+        <HiInbox />
         Manage Your Books
       </h2>
       <div className="max-w-screen-xl overflow-y-auto h-[84vh] relative mx-auto rounded-md ">
         <Table hoverable className="w-full ">
           <Table.Head className="bg-blue-extra-dark sticky top-0 text-yellow text-base font-semibold rounded-t-md">
-            <Table.HeadCell className="md:px-[1rem] lg:px[1.5rem]">ID</Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Book Name</Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Author</Table.HeadCell>
-            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">Category</Table.HeadCell>
-            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">Price</Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">Modify</Table.HeadCell>
+            <Table.HeadCell className="md:px-[1rem] lg:px[1.5rem]">
+              ID
+            </Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+              Book Name
+            </Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+              Author
+            </Table.HeadCell>
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">
+              Category
+            </Table.HeadCell>
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">
+              Price
+            </Table.HeadCell>
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+              Modify
+            </Table.HeadCell>
           </Table.Head>
 
           <Table.Body className="rounded-md">
             {allBooks.map((book, index) => (
               <Table.Row
                 key={book._id}
-                className="bg-white  dark:border-blue dark:bg-blue-extra-dark"
+                className="bg-off-white  dark:border-blue dark:bg-blue-extra-dark"
               >
                 <Table.Cell className=" md:px-[1rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {index + 1}
