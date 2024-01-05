@@ -3,6 +3,7 @@ import { Sidebar } from "flowbite-react";
 import { FaBars, FaHome } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { BiBuoy } from "react-icons/bi";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   HiChartPie,
   HiInbox,
@@ -22,7 +23,24 @@ const SideBar = () => {
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
+  const {logout} = useContext(AuthContext);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+
+  const from = location.state?.from?.pathname || "/";
+
+  const handleLogout = () => {
+      logout().then(() => {
+          
+          alert('Sign-out successfully!');
+          navigate(from, { replace: true });
+
+      }).catch((error) => {
+          //an error happened
+      })
+  }
   return (
     <>
       {/* Hamburger icon for small and medium devices */}
@@ -75,7 +93,7 @@ const SideBar = () => {
               Home
             </Sidebar.Item>
 
-            <Sidebar.Item className="hover:text-yellow" href="/logout" icon={HiTable}>
+            <Sidebar.Item className="hover:text-yellow" onClick={() => handleLogout()} icon={HiTable}>
               Logout
             </Sidebar.Item>
           </Sidebar.ItemGroup>

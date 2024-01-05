@@ -45,7 +45,7 @@ const BookCards = ({ headline, books }) => {
           className="mySwiper w-full h-full"
         >
           {books.map((book) => (
-            <SwiperSlide key={book._id} className="bg-blue-extra-dark hover:brightness-75 px-3 py-3 rounded-md mb-14">
+            <SwiperSlide key={book._id} className="bg-blue-extra-dark transition-all ease-in duration-200 hover:brightness-75 px-3 py-3 rounded-md mb-14">
               <Link to={`/book/${book._id}`} className="">
                 <div className="relative">
                   <img

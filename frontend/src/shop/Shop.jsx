@@ -44,7 +44,7 @@ const Shop = () => {
             <input type="text" name="search" id="search" placeholder="search a book by title/author/category" value={search} onChange={(e) => {
               setSearch(e.target.value)
               handleSearch()
-            }} className="px-2 h-[40px] w-[270px] rounded-l-lg text-sm font-extralight outline-none" />
+            }} className="px-2 h-[40px] w-[270px] bg-off-white hover:brightness-110 rounded-l-lg text-sm font-extralight transition-all ease-in duration-200 outline-none" />
             <button className="bg-blue h-[40px]  px-2 text-center hover:bg-blue-extra-dark rounded-r-lg transition-all ease-in duration-200 text-white" onClick={() => handleSearch()}><IoSearch /></button>
           </div>
         </div>
@@ -58,10 +58,11 @@ const Shop = () => {
 
       <div className="grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
         {books.map((book, index) => (
-          <Card key={index}>
-            <img src={book.imageURL} alt="" className="h-96" />
+          <Card key={index} className=" bg-off-white transition-all ease-in duration-200 hover:brightness-90 ">
 
-            <div className="flex flex-col gap-1 px-1">
+           <Link to={`/book/${book._id}`}>
+           <img src={book.imageURL} alt="" className="h-96" />
+           <div className="flex flex-col gap-1 px-1">
               <h3 className="font-bold text-ellipsis truncate text-blue-extra-dark text-xl">
                 {book.title}
               </h3>
@@ -81,6 +82,7 @@ const Shop = () => {
                 <div className="text-sm font-bold text-blue">$10.00</div>
               </div>
             </div>
+           </Link>
 
             <Link
               to={`${book.readBookURL}`}

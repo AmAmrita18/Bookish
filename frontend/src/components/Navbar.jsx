@@ -3,10 +3,27 @@ import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { AuthContext } from "../contects/AuthProvider";
-
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
- 
+  const {logout} = useContext(AuthContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+
+  const from = location.state?.from?.pathname || "/";
+
+  const handleLogout = () => {
+      logout().then(() => {
+          
+          alert('Sign-out successfully!');
+          navigate(from, { replace: true });
+
+      }).catch((error) => {
+          //an error happened
+      })
+  }
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -94,12 +111,12 @@ const Navbar = () => {
           {
             user && (
               <div className="space-x-12 hidden md:flex  items-center">
-                  <Link
-                    to={'/logout'}
-                    className={`block font-bold text-sm cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow`}
-                  >
-                    Logout
-                  </Link>
+                 <button
+            className="block font-bold text-sm cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow"
+            onClick={() => handleLogout()}
+        >
+            Logout
+        </button>
               
               </div>
             )
