@@ -7,7 +7,7 @@ const Shop = () => {
   const [search, setSearch] = useState();
 
   const handleSearch = () => {
-    fetch(`http://localhost:8000/all-books?search=${search}`)
+    fetch(`https://bookish-bo7d.onrender.com/all-books?search=${search}`)
       .then((res) => res.json())
       .then((data) => {
         setBooks(data)
@@ -16,7 +16,7 @@ const Shop = () => {
 
   }
   useEffect(() => {
-    fetch("http://localhost:8000/all-books")
+    fetch("https://bookish-bo7d.onrender.com/all-books")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);

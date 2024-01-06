@@ -7,7 +7,7 @@ const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/all-books")
+    fetch("https://bookish-bo7d.onrender.com/all-books")
       .then((res) => res.json())
       .then((data) => setAllBooks(data));
   }, []);
@@ -15,7 +15,7 @@ const ManageBooks = () => {
   // delete book
   const handleDelete = (id) => {
     console.log(id);
-    fetch(`http://localhost:8000/book/${id}`, {
+    fetch(`https://bookish-bo7d.onrender.com/book/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
