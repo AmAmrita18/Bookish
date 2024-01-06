@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book (6).png"
+                src="src/assets/about-img/book1.png"
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
@@ -79,7 +79,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book (4).png"
+                src="src/assets/about-img/book2.png"
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
@@ -111,7 +111,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/login.png"
+                src="src/assets/about-img/book3.png"
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />

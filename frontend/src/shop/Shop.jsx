@@ -5,15 +5,15 @@ import { IoSearch } from "react-icons/io5";
 const Shop = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState();
-  
+
   const handleSearch = () => {
     fetch(`http://localhost:8000/all-books?search=${search}`)
       .then((res) => res.json())
-      .then((data) =>{
+      .then((data) => {
         setBooks(data)
         console.log(data)
-      } );
-      
+      });
+
   }
   useEffect(() => {
     fetch("http://localhost:8000/all-books")
@@ -60,29 +60,29 @@ const Shop = () => {
         {books.map((book, index) => (
           <Card key={index} className=" bg-off-white transition-all ease-in duration-200 hover:brightness-90 ">
 
-           <Link to={`/book/${book._id}`}>
-           <img src={book.imageURL} alt="" className="h-96" />
-           <div className="flex flex-col gap-1 px-1">
-              <h3 className="font-bold text-ellipsis truncate pt-2 text-blue-extra-dark text-xl">
-                {book.title}
-              </h3>
-              <p className="text-sm font-semibold text-blue-extra-dark">
-                {book.author}
-              </p>
-              <p className="font-normal text-blue-extra-dark dark:text-blue">
-                <p className="text-blue line-clamp-4 text-xs">
-                  {book.description}
+            <Link to={`/book/${book._id}`}>
+              <img src={book.imageURL} alt="" className="h-96 mx-auto" />
+              <div className="flex flex-col gap-1 px-1">
+                <h3 className="font-bold text-ellipsis truncate pt-2 text-blue-extra-dark text-xl">
+                  {book.title}
+                </h3>
+                <p className="text-sm font-semibold text-blue-extra-dark">
+                  {book.author}
                 </p>
-              </p>
+                <p className="font-normal text-blue-extra-dark dark:text-blue">
+                  <p className="text-blue line-clamp-4 text-xs">
+                    {book.description}
+                  </p>
+                </p>
 
-              <div className="flex justify-between w-full items-center">
-                <p className="text-sm font-bold text-blue-extra-dark">
-                  {book.category}
-                </p>
-                <div className="text-sm font-bold text-blue">$10.00</div>
+                <div className="flex justify-between w-full items-center">
+                  <p className="text-sm font-bold text-blue-extra-dark">
+                    {book.category}
+                  </p>
+                  <div className="text-sm font-bold text-blue">$10.00</div>
+                </div>
               </div>
-            </div>
-           </Link>
+            </Link>
 
             <Link
               to={`${book.readBookURL}`}
