@@ -40,7 +40,7 @@ const Shop = () => {
             selection caters to every reader&apos;s taste. Let the
             magic of words transport you to worlds beyond your imagination.
           </p>
-          <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center md:justify-normal justify-center">
             <input type="text" name="search" id="search" placeholder="search a book by title/author/category" value={search} onChange={(e) => {
               setSearch(e.target.value)
               handleSearch()

@@ -22,8 +22,8 @@
 /* Styles for small devices (e.g., smartphones) */
 @media (max-width: 767px) {
   .banner .swiper {
-    max-width: 250px;
-    max-height: 375px;
+    max-width: 280px;
+    max-height: 400px;
   }
 }
 

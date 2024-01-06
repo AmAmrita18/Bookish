@@ -3,7 +3,7 @@ import bookPic from "../assets/promo-banner/banner1.png"
 const PromoBannerSecond = () => {
   return (
     <div className=" py-12 bg-blue-extra-dark px-4 lg:px-24">
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-12">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
       <div>
             <img src={bookPic} className="md:h-[380px] md:w-[380px] h-[320px] w-[320px] mx-8"/>
         </div>

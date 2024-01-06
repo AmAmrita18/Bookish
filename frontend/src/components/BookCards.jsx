@@ -22,14 +22,14 @@ const BookCards = ({ headline, books }) => {
       {/*cards*/}
       <div className="mt-12 ">
         <Swiper
-          slidesPerView={1}
+          slidesPerView={2}
           spaceBetween={10}
           pagination={{
             clickable: true,
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 2,
+            515: {
+              slidesPerView: 3,
               spaceBetween: 20,
             },
             768: {

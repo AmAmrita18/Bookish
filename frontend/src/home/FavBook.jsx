@@ -3,8 +3,8 @@ import favBookImg from "../assets/FavBookImage.png";
 const FavBook = () => {
   return (
     <div className="my-20 px-4 lg:px-32 flex flex-col md:flex-row justify-between items-center gap-12">
-      <div className="w-1/2 md:w-1/2">
-        <img src={favBookImg} alt="" className="rounded md:w-10/12 brightness-90" />
+      <div className="w-full md:w-1/2">
+        <img src={favBookImg} alt="" className="rounded md:w-10/12  brightness-90" />
       </div>
       <div className="md:w-1/2 space-y-6">
         <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold md:my-5 pr-2 my-0  leading-snug">

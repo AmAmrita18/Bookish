@@ -150,7 +150,7 @@ const Navbar = () => {
             <Link
               key={path}
               to={path}
-              className=" font-bold text-off-white cursor-pointer uppercase hover:text-yellow flex flex-col"
+              className=" font-bold text-off-white cursor-pointer uppercase hover:text-yellow flex flex-col items-center"
             >
               {link}
             </Link>

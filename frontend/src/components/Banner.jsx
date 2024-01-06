@@ -7,8 +7,8 @@ const Banner = () => {
   const [search, setSearch] = useState();
   
   return (
-    <div className="px-4  min-h-screen lg:px-32 bg-yellow flex  items-center">
-      <div className="flex w-full flex-col md:flex-row justify-between items-center gap-12 pt-40 pb-20">
+    <div className="px-4  min-h-screen lg:px-32 bg-yellow flex items-center">
+      <div className="flex w-full flex-col-reverse md:flex-row justify-between items-center gap-12 pt-40 pb-20">
         {/*left side */}
         <div className="lg:w-1/2 space-y-10 h-full">
           

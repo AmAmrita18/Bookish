@@ -27,7 +27,7 @@ const About = () => {
                 
               </p>
             </div>
-            <div className="md:w-[30%]">
+            <div className="md:w-[30%] ">
               <img
                 src="src/assets/about-img/book1.png"
                 alt=""

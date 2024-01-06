@@ -3,7 +3,7 @@ import bookPic from "../assets/promo-banner/banner2.png"
 const PromoBanner = () => {
   return (
     <div className="mt-16 py-12 bg-blue-extra-dark px-4 lg:px-24">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-12">
         <div className="md:w-1/2 flex flex-col gap-4">
           {/* <h2 className="text-5xl font-bold text-white mb-6 leading-Snug">Explore our <span className="text-yellow">Book</span> collections</h2> */}
           <h2 className=" lg:text-5xl md:text-4xl text-3xl text-off-white font-bold mb-4 leading-snug ">Share the Joy of<br/>Reading: <span className="text-yellow">Sell Your Books</span> with Us!</h2>
