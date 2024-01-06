@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
+import browseCollection from "../assets/browseCollectionImg.png";
 const Shop = () => {
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState();
@@ -50,7 +51,7 @@ const Shop = () => {
         </div>
         <div>
           <img
-            src="src/assets/browseCollectionImg.png"
+            src={browseCollection}
             className="md:h-[380px] md:w-[380px] h-[320px] w-[320px] mx-8 md:mt-0 mt-8"
           />
         </div>

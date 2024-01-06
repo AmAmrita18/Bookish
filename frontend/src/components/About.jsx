@@ -1,3 +1,6 @@
+import book1 from "../assets/about-img/book1.png";
+import book2 from "../assets/about-img/book2.png";
+import book3 from "../assets/about-img/book3.png";
 
 const About = () => {
   return (
@@ -29,7 +32,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%] ">
               <img
-                src="src/assets/about-img/book1.png"
+                src={book1}
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
@@ -79,7 +82,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book2.png"
+                src={book2}
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
@@ -111,7 +114,7 @@ const About = () => {
             </div>
             <div className="md:w-[30%]">
               <img
-                src="src/assets/about-img/book3.png"
+                src={book3}
                 alt=""
                 className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />

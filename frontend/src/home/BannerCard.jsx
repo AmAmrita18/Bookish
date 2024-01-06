@@ -13,23 +13,23 @@ import { EffectCards } from 'swiper/modules';
 const BannerCard = () => {
   return (
     <div className='banner '>
-        <Swiper
+      <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
         className="mySwiper "
       >
-       <div className=''>
-       <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-       </div>
+        <div className=''>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+        </div>
       </Swiper>
     </div>
   )
