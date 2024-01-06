@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div className="  w-full min-h-screen md:px-8 px-2 lg:px-20 bg-yellow">
       <div className="container  mx-auto lg:mt-8 mt-2">
-        <h1 className="lg:text-5xl md:text-4xl text-3xl text-blue-extra-dark font-bold lg:mb-4 mb-1 flex items-center gap-1 justify-center">
+        <h1 className="lg:text-5xl md:text-4xl text-3xl md:py-0 pt-14 text-blue-extra-dark font-bold lg:mb-4  mb-1 flex items-center gap-1 justify-center">
           <TbChartInfographic />
           Overview
         </h1>
@@ -95,7 +95,7 @@ const Dashboard = () => {
             <div className="flex justify-center">
               <img src={graph1} alt="" className=" py-4 " />
             </div>
-            <div className="text-blue-extra-dark lg:px-16 px-2 pb-4 flex justify-between">
+            <div className="text-blue-extra-dark lg:px-16  md:px-2 px-10 pb-4 flex justify-between">
               <div>
                 <h1 className="lg:text-lg text-base font-semibold text-blue-extra-dark">
                   Daily Sales
@@ -118,7 +118,7 @@ const Dashboard = () => {
                 </h1>
               </div>
             </div>
-            <div className="border-t-2 border-t-off-white lg:px-16 px-2 py-2 mb-1">
+            <div className="border-t-2 border-t-off-white lg:px-16  md:px-2 px-10 py-2 mb-1">
               <h1 className="text-blue pt-2 lg:text-sm text-xs font-light flex items-center gap-1">
                 <FaClock />
                 updated 4 min ago
@@ -130,7 +130,7 @@ const Dashboard = () => {
             <div className="flex justify-center">
               <img src={graph2} alt="" className="py-4" />
             </div>
-            <div className="text-blue-extra-dark lg:px-16 px-2 pb-4 flex justify-between">
+            <div className="text-blue-extra-dark lg:px-16 md:px-2 px-10 pb-4 flex justify-between">
               <div>
                 <h1 className="lg:text-lg text-base font-semibold text-blue-extra-dark">
                   Website View
@@ -153,7 +153,7 @@ const Dashboard = () => {
                 </h1>
               </div>
             </div>
-            <div className="border-t-2 border-t-off-white lg:px-16 px-2 py-2 mb-1">
+            <div className="border-t-2 border-t-off-white lg:px-16  md:px-2 px-10 py-2 mb-1">
               <h1 className="text-blue pt-2 lg:text-sm text-xs font-light flex items-center gap-1">
                 <FaClock />
                 campaign sent 2 days ago

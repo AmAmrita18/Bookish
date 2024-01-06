@@ -12,13 +12,15 @@ import { EffectCards } from 'swiper/modules';
 
 const BannerCard = () => {
   return (
-    <div className='banner'>
+    <div className='banner '>
         <Swiper
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className="mySwiper "
       >
+       <div className=''>
+       <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
@@ -27,7 +29,7 @@ const BannerCard = () => {
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+       </div>
       </Swiper>
     </div>
   )

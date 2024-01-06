@@ -26,7 +26,7 @@ const ManageBooks = () => {
   };
 
   return (
-    <div className="px-1 lg:pt-0 pb-8  md:pt-0   pt-8 mt-3 lg:px-16 bg-yellow w-full">
+    <div className="px-1 lg:pt-0 pb-8  md:pt-4 md:py-8  pt-14  mt-3 lg:px-16 bg-yellow w-full">
       <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center flex gap-1 items-center justify-center">
         <HiInbox />
         Manage Your Books

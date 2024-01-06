@@ -12,8 +12,8 @@ const CarouselCard = () => {
                      <div key={slider.id} className='relative'>
                       <img src={slider.image} className="w-full h-full object-cover" alt="..." />
                       <div className='bg-blue-extra-dark p-2 gap-2  bg-opacity-60 absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center'>
-                        <h2 className='text-off-white font-semibold text-2xl  rounded-md text-center'>{slider.quote}</h2>
-                        <p className=' text-off-white text-sm text-opacity-70'>{slider.author}</p>
+                        <h2 className='text-off-white font-semibold md:text-2xl text-lg  rounded-md text-center'>{slider.quote}</h2>
+                        <p className=' text-off-white md:text-sm text-xs text-opacity-70'>{slider.author}</p>
                       </div>
                     </div> 
                   ))

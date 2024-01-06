@@ -15,7 +15,7 @@ import { FaCartShopping } from "react-icons/fa6";
 const BookCards = ({ headline, books }) => {
   return (
     <div className=" px-4 pb-7 lg:px-32 bg-off-white">
-      <h2 className="text-5xl text-center font-bold text-blue-extra-dark pt-10">
+      <h2 className="lg:text-5xl md:text-4xl text-3xl text-center font-bold text-blue-extra-dark pt-10">
         {headline}
       </h2>
 
@@ -47,13 +47,13 @@ const BookCards = ({ headline, books }) => {
           {books.map((book) => (
             <SwiperSlide key={book._id} className="bg-blue-extra-dark transition-all ease-in duration-200 hover:brightness-75 px-3 py-3 rounded-md mb-14">
               <Link to={`/book/${book._id}`} className="">
-                <div className="relative">
+                <div className="relative ">
                   <img
                     src={book.imageURL}
                     className="w-[212px] h-[284px] mb-2"
                     alt=""
                   />
-                  <div className="absolute top-3 right-3 bg-blue hover:bg-blue-extra-dark p-2 rounded">
+                  <div className="absolute  top-3 right-3 bg-blue hover:bg-blue-extra-dark p-2 rounded">
                     <FaCartShopping className="w-4 h-4 text-white" />
                   </div>
                 </div>

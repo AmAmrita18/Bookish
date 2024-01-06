@@ -10,8 +10,8 @@ const About = () => {
         <section className="md:my-16 mt-12">
           <div className="flex w-full md:flex-row flex-col  justify-between items-center py-4 gap-10">
             <div className="md:w-[70%] w-full ">
-              <h2 className="text-5xl text-blue font-bold mb-4 leading-snug">Our Mission</h2>
-              <p className="text-blue-extra-dark text-base">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">Our Mission</h2>
+              <p className="text-blue-extra-dark lg:text-base text-sm">
                 At Bookish, our mission is to foster a community of book lovers
                 by providing a platform that seamlessly connects readers,
                 buyers, and sellers. We aim to celebrate the joy of reading and
@@ -31,7 +31,7 @@ const About = () => {
               <img
                 src="src/assets/about-img/book (6).png"
                 alt=""
-                className="w-[300px] h-[300px]"
+                className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
             </div>
           </div>
@@ -42,10 +42,10 @@ const About = () => {
           <div className="flex w-full  md:flex-row-reverse flex-col justify-between items-center py-4 gap-10">
             
             <div className="md:w-[70%] w-full">
-              <h2 className="text-5xl text-blue font-bold mb-4 leading-snug">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">
                 What Sets Us Apart?
               </h2>
-              <p className="text-blue-extra-dark text-base ">
+              <p className="text-blue-extra-dark lg:text-base text-sm">
                 At Bookish, our commitment to excellence goes beyond the
                 ordinary. What sets us apart is the dedication to providing a
                 personalized and inclusive experience for our users. We
@@ -81,7 +81,7 @@ const About = () => {
               <img
                 src="src/assets/about-img/book (4).png"
                 alt=""
-                className="w-[300px] h-[300px]"
+                className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
             </div>
           </div>
@@ -94,10 +94,10 @@ const About = () => {
           <div className="flex w-full  md:flex-row flex-col justify-between items-center py-4 gap-10">
             
             <div className="md:w-[70%] w-full">
-              <h2 className="text-5xl text-blue font-bold mb-4 leading-snug">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">
                 Why Bookish?
               </h2>
-              <p className="text-blue-extra-dark text-base">
+              <p className="text-blue-extra-dark lg:text-base text-sm">
               Dive into a world of diverse stories and genres. Bookish offers an extensive range of books, ensuring that every reader discovers something new and exciting.
               
                 Choose Bookish because we are more than just a marketplace — we
@@ -113,7 +113,7 @@ const About = () => {
               <img
                 src="src/assets/login.png"
                 alt=""
-                className="w-[300px] h-[300px]"
+                className="lg:w-[300px] lg:h-[300px] w-[250px] h-[250px]"
               />
             </div>
           </div>

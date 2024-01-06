@@ -72,7 +72,7 @@ const EditBooks = () => {
   };
 
   return (
-    <div className="px-8 md:px-8 lg:px-16 py-8 bg-yellow w-full ">
+    <div className="px-8 md:px-8 lg:px-16 md:py-8 pt-14 md:pt-4 bg-yellow w-full ">
       <h2 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center flex gap-1 items-center justify-center"><MdBrowserUpdated />
 Update the book data</h2>
       <form
@@ -174,7 +174,7 @@ Update the book data</h2>
             />
           </div>
         </div>
-        <Button type="submit" className="mt-5 border-none text-off-white bg-blue hover:bg-blue-extra-dark">
+        <Button type="submit" className="mt-5 border-none md:mb-0 mb-4 text-off-white bg-blue hover:bg-blue-extra-dark">
           Update Book
         </Button>
       </form>

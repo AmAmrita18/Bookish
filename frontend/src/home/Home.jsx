@@ -10,7 +10,6 @@ import Review from "./Review"
 const Home = () => {
   return (
     <div className="w-full bg-yellow">
-      
       <Banner/>
       <CarouselCard/>
       <BestSellerBooks/>

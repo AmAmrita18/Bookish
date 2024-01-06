@@ -3,7 +3,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 const MyFooter = () => {
   return (
     <Footer className='bg-blue-extra-dark rounded-none'>
-      <div className="w-full lg:px-32">
+      <div className="w-full lg:px-32  px-4">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
           <div>
             <Footer.Title title="Company" className='text-yellow ' />

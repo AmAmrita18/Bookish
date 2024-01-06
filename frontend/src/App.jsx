@@ -5,15 +5,12 @@ import MyFooter from './components/MyFooter'
 function App() {
 
   return (
-    <>
-    <Navbar/>
-      <div className='min-h-screen'>
-      <Outlet/>
-      </div>
-      <MyFooter/>
-    </>
+    <div className=''>
+      <Navbar />
+      <Outlet />
+      <MyFooter />
+    </div>
   )
 }
 
 export default App
-  

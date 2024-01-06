@@ -3,6 +3,30 @@
   height: 445px;
 }
 
+/* Styles for medium devices (e.g., tablets) */
+@media (min-width: 768px) {
+  .banner .swiper {
+    max-width: 250px;
+    max-height: 375px;
+  }
+}
+
+/* Styles for large devices (e.g., desktops) */
+@media (min-width: 1024px) {
+  .banner .swiper {
+    max-width: 300px;
+    max-height: 445px;
+  }
+}
+
+/* Styles for small devices (e.g., smartphones) */
+@media (max-width: 767px) {
+  .banner .swiper {
+    max-width: 250px;
+    max-height: 375px;
+  }
+}
+
 .banner .swiper-slide {
   display: flex;
   align-items: center;

@@ -21,16 +21,16 @@ const Shop = () => {
       .then((data) => setBooks(data));
   }, []);
   return (
-    <div className="px-4 pt-28 pb-[1rem] lg:px-32 bg-yellow">
+    <div className="px-4 md:px-8 pt-28 pb-[1rem] lg:px-32 bg-yellow">
       <div className="flex w-full flex-col md:flex-row justify-between items-center py-4 ">
         <div className="md:w-1/2 space-y-10">
-          <h2 className=" text-5xl text-blue-extra-dark font-bold leading-snug ">
+          <h2 className=" lg:text-5xl md:text-4xl text-3xl text-blue-extra-dark font-bold leading-snug ">
             Explore Our <span className="text-blue">Book</span> Collections
           </h2>
-          <h4 className="text-2xl font-bold font-sans text-blue-extra-dark italic">
+          <h4 className="md:text-2xl font-bold text-xl text-blue-extra-dark italic">
             &#10077; Your Next Chapter Begins Here! &#10078;
           </h4>
-          <p className="text-base text-blue-extra-dark mb-8">
+          <p className="md:text-base text-sm text-blue-extra-dark mb-8">
             Embark on a literary
             journey through our diverse book collection, where every page holds
             a new adventure waiting to unfold. Whether you&apos;re drawn to the
@@ -51,12 +51,12 @@ const Shop = () => {
         <div>
           <img
             src="src/assets/browseCollectionImg.png"
-            className="h-[380px] w-[380px] mx-8"
+            className="md:h-[380px] md:w-[380px] h-[320px] w-[320px] mx-8 md:mt-0 mt-8"
           />
         </div>
       </div>
 
-      <div className="grid gap-8 my-12 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1">
+      <div className="grid gap-8 my-12 lg:grid-cols-4 grid-cols-2 md:grid-cols-3 ">
         {books.map((book, index) => (
           <Card key={index} className=" bg-off-white transition-all ease-in duration-200 hover:brightness-90 ">
 

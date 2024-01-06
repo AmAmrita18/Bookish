@@ -56,16 +56,17 @@ const Navbar = () => {
     { link: "Browse", path: "/shop" },
     { link: "Sell Your Book", path: "/admin/dashboard" },
     { link: "About", path: "/about" },
+   
   ];
 
   return (
-    <header className="w-full lg:px-32 px-4  bg-blue-extra-dark shadow-inner fixed top-0 right-0 transition-all ease-in duration-300">
+    <header className="w-full lg:px-32 px-4  bg-blue-extra-dark shadow-inner fixed top-0  transition-all ease-in duration-300">
       <nav
         className={`py-4  ${
           isSticky ? "sticky top-0 right-0" : ""
         }`}
       >
-        <div className="flex justify-between items-center text-base gap-8">
+        <div className="flex justify-between  items-center text-base gap-8">
           {/*logo*/}
           <Link
             to="/"
@@ -89,18 +90,19 @@ const Navbar = () => {
           </ul>
 
           {/* btn for lg devices*/}
-          {
+         <div className="flex gap-3 items-center">
+         {
             !user && (
-              <div className="space-x-12 hidden md:flex  items-center">
+              <div className="space-x-2  flex  items-center">
                   <Link
                     to={'/login'}
-                    className={`block font-bold text-sm cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow`}
+                    className={`block font-bold md:text-sm text-xs cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow`}
                   >
                     Login
                   </Link>
                   <Link
                     to={'/sign-up'}
-                    className={`block font-bold text-sm cursor-pointer uppercase  border-yellow hover:border-off-white border-2 px-3 py-2 rounded-md text-off-white hover:text-yellow`}
+                    className={`block font-bold md:text-sm text-xs cursor-pointer uppercase  border-yellow hover:border-off-white border-2 px-3 py-2 rounded-md text-off-white hover:text-yellow`}
                   >
                     Sign Up
                   </Link>
@@ -110,9 +112,9 @@ const Navbar = () => {
           }
           {
             user && (
-              <div className="space-x-12 hidden md:flex  items-center">
+              <div className="space-x-12  flex  items-center">
                  <button
-            className="block font-bold text-sm cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow"
+            className="block font-bold lg:text-sm text-xs cursor-pointer uppercase border-yellow hover:border-off-white border-2 px-4 py-2 rounded-md text-off-white hover:text-yellow"
             onClick={() => handleLogout()}
         >
             Logout
@@ -136,6 +138,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+         </div>
 
         {/*NavItems for sm devices */}
         <div
