@@ -62,7 +62,7 @@ const BookCards = ({ headline, books }) => {
                     <h3 className="font-semibold text-ellipsis truncate text-off-white text-lg">
                       {book.title}
                     </h3>
-                    <p className="text-sm font-light text-off-white">
+                    <p className="text-sm font-light  text-ellipsis truncate text-off-white">
                       {book.author}
                     </p>
                     <div className="flex justify-between w-full">

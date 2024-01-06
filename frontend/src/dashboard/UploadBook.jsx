@@ -4,24 +4,20 @@ import { IoCloudUpload } from "react-icons/io5";
 
 const UploadBook = () => {
   const bookCategories = [
-    "Fiction",
-    "Non-Fiction",
-    "Mystery",
-    "Programming",
-    "Science Fiction",
+    "Biography",
+    "Classics",
     "Fantasy",
+    "Fiction",
+    "Historical Fiction",
     "Horror",
-    "Bibliography",
-    "Autobiography",
-    "History",
-    "Self-help",
+    "Mystery",
+    "Non Fiction",
     "Romance",
-    "Memoir",
-    "Business",
-    "Children Books",
-    "Travel",
-    "Religion",
-    "Art and Design",
+    "Science Fiction",
+    "Self Help",
+    "Spirituality",
+    "Thriller",
+    "Young Adult"
   ];
 
   const [selectedBookCategory, setSelectedBookCategory] = useState(
@@ -136,6 +132,7 @@ const UploadBook = () => {
             <Select
               id="inputState"
               name="category"
+              
               className="rounded"
               value={selectedBookCategory}
               onChange={handleChangeSelectedValue}

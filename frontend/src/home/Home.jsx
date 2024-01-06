@@ -11,16 +11,12 @@ const Home = () => {
   return (
     <div className="w-full bg-yellow">
       <Banner/>
-      
       <CarouselCard/>
       <PromoBannerSecond/>
-      <BestSellerBooks/>
-      
+      <OtherBooks/>
       <FavBook/>
       <PromoBanner/>
-      <OtherBooks/>
-      
-      
+      <BestSellerBooks/>
       <Review/>
     </div>
   )
