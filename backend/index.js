@@ -3,9 +3,25 @@ const app = express();
 const port = process.env.PORT || 8000;
 const cors = require("cors");
 
+const path = require('path');
+
+
+
+
+
 //middleware
 app.use(cors());
 app.use(express.json());
+
+
+// Serve static files
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Handle other routes by serving index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
