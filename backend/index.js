@@ -5,22 +5,19 @@ const cors = require("cors");
 
 const path = require('path');
 
-
-
-
-
 //middleware
 app.use(cors());
 app.use(express.json());
 
+// const __dirname = path.resolve();
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
-// Handle other routes by serving index.html
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// // Handle other routes by serving index.html
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 
 app.get("/", (req, res) => {
@@ -43,6 +40,7 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
+
 
 async function run() {
   try {
@@ -141,6 +139,15 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
+})
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
