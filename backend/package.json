@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "build" : "npm install"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/AmAmrita18/Bookish"
+    "url": "https://github.com/AmAmrita18/Bookish"
   },
   "author": "Amrita Gupta",
   "license": "ISC",
