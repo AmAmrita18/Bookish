@@ -50,7 +50,7 @@ const UploadBook = () => {
     console.log(bookObj);
 
     // send data to DB
-    fetch("https://bookish-bo7d.onrender.com/upload-book", {
+    fetch("http://localhost:8000/upload-book", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

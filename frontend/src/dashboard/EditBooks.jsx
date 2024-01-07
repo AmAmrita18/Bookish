@@ -60,7 +60,7 @@ const EditBooks = () => {
     // console.log(bookObj);
 
     //update book data
-    fetch(`https://bookish-bo7d.onrender.com/book/${id}`, {
+    fetch(`http://localhost:8000/book/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
