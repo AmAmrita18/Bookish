@@ -9,6 +9,7 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 
+app.use(express.urlencoded({ extended: true }));
 // const __dirname = path.resolve();
 
 // Serve static files

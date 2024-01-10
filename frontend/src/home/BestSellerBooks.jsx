@@ -5,7 +5,7 @@ const BestSellerBooks = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch("https://bookish-bo7d.onrender.com/all-books").then(res => res.json()).then(data => setBooks(data.slice(0,11)))
+        fetch("https://bookish-backend-1.onrender.com/all-books").then(res => res.json()).then(data => setBooks(data.slice(4,17)))
     }, [])
   return (
     

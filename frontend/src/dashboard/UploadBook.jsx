@@ -50,7 +50,7 @@ const UploadBook = () => {
     console.log(bookObj);
 
     // send data to DB
-    fetch("http://localhost:8000/upload-book", {
+    fetch("https://bookish-backend-1.onrender.com/upload-book", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -75,7 +75,7 @@ const UploadBook = () => {
         <div className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
           <div className="mb-4 md:w-[45%]">
             <Label
-              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              className="text-lg md:text-xl font-bold !text-blue-extra-dark"
               htmlFor="title"
               value="Book Title"
               name="title"
@@ -91,7 +91,7 @@ const UploadBook = () => {
 
           <div className="mb-4 md:w-[45%]">
             <Label
-              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              className="text-lg md:text-xl font-bold !text-blue-extra-dark"
               htmlFor="author"
               value="Author Name"
               name="author"
@@ -109,7 +109,7 @@ const UploadBook = () => {
         <div className="flex flex-wrap md:gap-4 justify-between md:flex-row flex-col">
           <div className="mb-4 md:w-[45%]">
             <Label
-              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              className="text-lg md:text-xl font-bold !text-blue-extra-dark"
               htmlFor="imageURL"
               value="Book image URL"
               name="imageURL"
@@ -125,7 +125,7 @@ const UploadBook = () => {
 
           <div className="mb-4 md:w-[45%]">
             <Label
-              className="text-lg md:text-xl font-bold text-blue-extra-dark"
+              className="text-lg md:text-xl font-bold !text-blue-extra-dark"
               htmlFor="inputState"
               value="Book Category"
             />
@@ -148,7 +148,7 @@ const UploadBook = () => {
 
         <div className="mb-4">
           <Label
-            className="text-lg md:text-xl font-bold text-blue-extra-dark"
+            className="text-lg md:text-xl font-bold !text-blue-extra-dark"
             htmlFor="description"
             value="Book Description"
           />
@@ -164,7 +164,7 @@ const UploadBook = () => {
 
         <div className="mb-4">
           <Label
-            className="text-lg md:text-xl font-bold text-blue-extra-dark"
+            className="text-lg md:text-xl font-bold !text-blue-extra-dark"
             htmlFor="readBookURL"
             value="Book PDF URL"
           />

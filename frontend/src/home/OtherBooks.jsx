@@ -5,7 +5,7 @@ const OtherBooks = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        fetch("https://bookish-bo7d.onrender.com/all-books").then(res => res.json()).then(data => setBooks(data.slice(31,42)))
+        fetch("https://bookish-backend-1.onrender.com/all-books").then(res => res.json()).then(data => setBooks(data.slice(30,41)))
     }, [])
   return (
     <div>

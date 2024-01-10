@@ -3,7 +3,7 @@ import { Sidebar } from "flowbite-react";
 import { FaBars, FaHome } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { BiBuoy } from "react-icons/bi";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoCloudUpload } from "react-icons/io5";
 
 import {
@@ -61,8 +61,9 @@ const SideBar = () => {
         className={`fixed md:relative mt-10 lg:pr-6 md:mt-0 bg-blue-extra-dark min-h-screen py-4 ${showSidebar ? "md:block" : "hidden md:block"}`}
       >
         <Sidebar.Items>
-          <Sidebar.Logo href="/">
+          <Sidebar.Logo>
             <div className="flex items-center ">
+              <Link to="/">
               <img
                 src={user?.photoURL || "/book.png"}
                 className="rounded-full absolute left-5 w-[24px] h-[24px]"
@@ -70,43 +71,50 @@ const SideBar = () => {
               />
               <p className="text-yellow pl-5 text-semibold">
                 {user?.displayName || "Bookish"}
-              </p>
+              </p></Link>
             </div>
           </Sidebar.Logo>
           <Sidebar.ItemGroup className="text-off-white">
-            <Sidebar.Item className="hover:text-yellow" href="/admin/dashboard" icon={HiChartPie}>
-              Dashboard
+            <Sidebar.Item className="hover:text-yellow" icon={HiChartPie}>
+             <Link to="/admin/dashboard"> Dashboard</Link>
             </Sidebar.Item>
             <Sidebar.Item
               className="hover:text-yellow"
-              href="/admin/dashboard/upload"
               icon={IoCloudUpload}
             >
-              Upload Books
+               <Link to="/admin/dashboard/upload"> Upload Books</Link>
+              
             </Sidebar.Item>
-            <Sidebar.Item className="hover:text-yellow" href="/admin/dashboard/manage" icon={HiInbox}>
-              Manage Books
+            <Sidebar.Item className="hover:text-yellow" icon={HiInbox}>
+              <Link to="/admin/dashboard/manage">Manage Books</Link>
+              
             </Sidebar.Item>
-            <Sidebar.Item className="hover:text-yellow" href="#" icon={HiUser}>
-              Users
+            <Sidebar.Item className="hover:text-yellow"  icon={HiUser}>
+              <Link to="#">Users</Link>
+              
             </Sidebar.Item>
-            <Sidebar.Item className="hover:text-yellow" href="/" icon={FaHome}>
-              Home
+            <Sidebar.Item className="hover:text-yellow" icon={FaHome}>
+              <Link to="/">Home</Link>
+              
             </Sidebar.Item>
 
             <Sidebar.Item className="hover:text-yellow" onClick={() => handleLogout()} icon={HiTable}>
-              Logout
+              <Link to=""> Logout</Link>
+             
             </Sidebar.Item>
           </Sidebar.ItemGroup>
           <Sidebar.ItemGroup className="text-off-white ">
-            <Sidebar.Item className="hover:text-yellow" href="#" icon={HiChartPie}>
-              Upgrade to Pro
+            <Sidebar.Item className="hover:text-yellow" icon={HiChartPie}>
+              <Link to="#">Upgrade to Pro</Link>
+              
             </Sidebar.Item>
-            <Sidebar.Item className="hover:text-yellow" href="#" icon={HiViewBoards}>
-              Documentation
+            <Sidebar.Item className="hover:text-yellow" icon={HiViewBoards}>
+              <Link to="#">Documentation</Link>
+              
             </Sidebar.Item>
-            <Sidebar.Item className="hover:text-yellow" href="#" icon={BiBuoy}>
-              Help
+            <Sidebar.Item className="hover:text-yellow" icon={BiBuoy}>
+              <Link to="#">Help</Link>
+            
             </Sidebar.Item>
           </Sidebar.ItemGroup>
         </Sidebar.Items>

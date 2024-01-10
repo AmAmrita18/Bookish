@@ -3,26 +3,40 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiInbox } from "react-icons/hi";
 
+import { useContext } from "react";
+import { AuthContext } from "../contects/AuthProvider";
+
+
+
 const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
+  const { user } = useContext(AuthContext);
+
 
   useEffect(() => {
-    fetch("http://localhost:8000/all-books")
+    console.log(user?.email)
+    console.log(import.meta.env.VITE_ADMIN_USER)
+    fetch("https://bookish-backend-1.onrender.com/all-books")
       .then((res) => res.json())
       .then((data) => setAllBooks(data));
   }, []);
 
   // delete book
+
   const handleDelete = (id) => {
-    console.log(id);
-    fetch(`http://localhost:8000.com/book/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        alert("Book is deleted successfully!");
-        // setAllBooks(data);
-      });
+    if(user?.email=== import.meta.env.VITE_ADMIN_USER){
+
+      console.log(id);
+      fetch(`https://bookish-backend-1.onrender.com/book/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          alert("Book is deleted successfully!");
+          // setAllBooks(data);
+        });
+    }
+    else{alert("You're not authorized to delete!")}
   };
 
   return (
@@ -34,22 +48,22 @@ const ManageBooks = () => {
       <div className="max-w-screen-xl overflow-y-auto h-[84vh] relative mx-auto rounded-md ">
         <Table hoverable className="w-full ">
           <Table.Head className="bg-blue-extra-dark sticky top-0 text-yellow text-base font-semibold rounded-t-md">
-            <Table.HeadCell className="md:px-[1rem] lg:px[1.5rem]">
+            <Table.HeadCell className="md:px-[1rem] lg:px[1.5rem] px-[0.3rem]">
               ID
             </Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem]">
               Book Name
             </Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem]">
               Author
             </Table.HeadCell>
-            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] px-[0.3rem] lg:px[1.5rem]">
               Category
             </Table.HeadCell>
-            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] lg:px[1.5rem]">
+            <Table.HeadCell className="hidden md:table-cell md:px-[0.5rem] px-[0.3rem] lg:px[1.5rem]">
               Price
             </Table.HeadCell>
-            <Table.HeadCell className="md:px-[0.5rem] lg:px[1.5rem]">
+            <Table.HeadCell className="md:px-[0.5rem] px-[0.3rem] lg:px[1.5rem]">
               Modify
             </Table.HeadCell>
           </Table.Head>
@@ -58,24 +72,24 @@ const ManageBooks = () => {
             {allBooks.map((book, index) => (
               <Table.Row
                 key={book._id}
-                className="bg-off-white  dark:border-blue dark:bg-blue-extra-dark"
+                className="!bg-off-white"
               >
-                <Table.Cell className=" md:px-[1rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
+                <Table.Cell className=" md:px-[1rem] lg:px[1.5rem] px-[0.3rem] font-medium !text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {index + 1}
                 </Table.Cell>
-                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem] font-medium !text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.title}
                 </Table.Cell>
-                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem] font-medium !text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.author}
                 </Table.Cell>
-                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] hidden md:table-cell font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem] hidden md:table-cell font-medium !text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   {book.category}
                 </Table.Cell>
-                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] hidden md:table-cell font-medium text-blue-extra-dark text:xs md:text-sm lg:text-base">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem] hidden md:table-cell font-medium !text-blue-extra-dark text:xs md:text-sm lg:text-base">
                   $10.00
                 </Table.Cell>
-                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] flex gap-2">
+                <Table.Cell className=" md:px-[0.5rem] lg:px[1.5rem] px-[0.3rem] flex gap-2">
                   <Link
                     to={`/admin/dashboard/edit-books/${book._id}`}
                     className="font-bold text-white hover:bg-blue-extra-dark bg-blue rounded-full px-2 py-1 md:text-sm text-xs"
