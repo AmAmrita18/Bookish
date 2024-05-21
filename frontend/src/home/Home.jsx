@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div className="w-full bg-yellow">
       <Banner/>
-      <CarouselCard/>
-      <PromoBannerSecond/>
       <OtherBooks/>
+      <PromoBannerSecond/>
+      <CarouselCard/>
       <FavBook/>
       <PromoBanner/>
       <BestSellerBooks/>

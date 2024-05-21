@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 // import './styles.css';
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination, Keyboard } from "swiper/modules";
 
 const Review = () => {
   return (
@@ -28,6 +28,9 @@ const Review = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
+          keyboard={{
+            enabled: true,
+          }}
           pagination={{
             clickable: true,
           }}
@@ -45,7 +48,7 @@ const Review = () => {
               spaceBetween: 50,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard]}
           className="mySwiper"
         >
           <SwiperSlide className="bg-off-white mb-16 hover:brightness-90 pt-8 px-4 shadow-md shadow-off-white rounded-lg">

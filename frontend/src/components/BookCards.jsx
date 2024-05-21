@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 // import './styles.css';
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Pagination,  Keyboard } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 
@@ -24,6 +24,9 @@ const BookCards = ({ headline, books }) => {
         <Swiper
           slidesPerView={2}
           spaceBetween={10}
+          keyboard={{
+            enabled: true,
+          }}
           pagination={{
             clickable: true,
           }}
@@ -41,11 +44,11 @@ const BookCards = ({ headline, books }) => {
               spaceBetween: 50,
             },
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard]}
           className="mySwiper w-full h-full"
         >
           {books.map((book) => (
-            <SwiperSlide key={book._id} className="bg-blue-extra-dark transition-all ease-in duration-200 hover:brightness-75 px-3 py-3 rounded-md mb-14">
+            <SwiperSlide key={book._id} className="bg-blue-extra-dark transition-all ease-in-out duration-700 hover:scale-95  hover:brightness-75 px-3 py-3 rounded-md mb-14">
               <Link to={`/book/${book._id}`} className="">
                 <div className="relative ">
                   <img

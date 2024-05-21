@@ -7,7 +7,7 @@ const FavBook = () => {
         <img src={favBookImg} alt="" className="rounded md:w-10/12  brightness-90" />
       </div>
       <div className="md:w-1/2 space-y-6">
-        <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold md:my-5 pr-2 my-0  leading-snug">
+        <h2 className="lg:text-6xl md:text-4xl text-3xl font-bold md:my-5 pr-2 my-0  leading-snug">
           Find Your Favourite<br/> <span className="text-blue">Book Here!</span>
         </h2>
         <p className="mb-10 lg:text-lg text-base md:w-5/6">

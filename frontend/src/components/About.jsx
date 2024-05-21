@@ -13,7 +13,7 @@ const About = () => {
         <section className="md:my-16 mt-12">
           <div className="flex w-full md:flex-row flex-col  justify-between items-center py-4 gap-10">
             <div className="md:w-[70%] w-full ">
-              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">Our Mission</h2>
+              <h2 className="lg:text-6xl md:text-4xl text-3xl text-blue-extra-dark font-bold mb-4 leading-snug">Our Mission</h2>
               <p className="text-blue-extra-dark lg:text-base text-sm">
                 At Bookish, our mission is to foster a community of book lovers
                 by providing a platform that seamlessly connects readers,
@@ -45,7 +45,7 @@ const About = () => {
           <div className="flex w-full  md:flex-row-reverse flex-col justify-between items-center py-4 gap-10">
             
             <div className="md:w-[70%] w-full">
-              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">
+              <h2 className="lg:text-6xl md:text-4xl text-3xl text-blue-extra-dark font-bold mb-4 leading-snug">
                 What Sets Us Apart?
               </h2>
               <p className="text-blue-extra-dark lg:text-base text-sm">
@@ -97,7 +97,7 @@ const About = () => {
           <div className="flex w-full  md:flex-row flex-col justify-between items-center py-4 gap-10">
             
             <div className="md:w-[70%] w-full">
-              <h2 className="lg:text-5xl md:text-4xl text-3xl text-blue font-bold mb-4 leading-snug">
+              <h2 className="lg:text-6xl md:text-4xl text-3xl text-blue-extra-dark font-bold mb-4 leading-snug">
                 Why Bookish?
               </h2>
               <p className="text-blue-extra-dark lg:text-base text-sm">

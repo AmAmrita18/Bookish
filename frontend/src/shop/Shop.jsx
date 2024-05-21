@@ -25,7 +25,7 @@ const Shop = () => {
     <div className="px-4 md:px-8 pt-28 pb-[1rem] lg:px-32 bg-yellow">
       <div className="flex w-full flex-col md:flex-row justify-between items-center py-4 ">
         <div className="md:w-1/2 space-y-10">
-          <h2 className=" lg:text-5xl md:text-4xl text-3xl text-blue-extra-dark font-bold leading-snug ">
+          <h2 className=" lg:text-6xl md:text-4xl text-3xl text-blue-extra-dark font-bold leading-snug ">
             Explore Our <span className="text-blue">Book</span> Collections
           </h2>
           <h4 className="md:text-2xl font-bold text-xl text-blue-extra-dark italic">
@@ -59,7 +59,7 @@ const Shop = () => {
 
       <div className="grid gap-8 my-12 lg:grid-cols-4 grid-cols-2 md:grid-cols-3 ">
         {books.map((book, index) => (
-          <Card key={index} className=" bg-off-white transition-all ease-in duration-200 hover:brightness-90 ">
+          <Card key={index} className=" bg-off-white transition-all ease-in-out duration-700 hover:scale-95 hover:brightness-90 ">
 
             <Link to={`/book/${book._id}`}>
               <img src={book.imageURL} alt="" className="h-96 mx-auto" />
